@@ -1,3 +1,11 @@
+import React from 'react'
+
+const buttonRender = props => (
+
+  <button style={{backgroundColor: 'lightgray', display: 'inline-block', padding: '1rem', border: 'none', borderRadius: '5px', cursor: 'pointer'}}>{props.children}</button>
+
+)
+
 export default {
   name: 'bodyPortableText',
   type: 'array',
@@ -29,18 +37,48 @@ export default {
           {
             name: 'link',
             type: 'object',
-            title: 'URL',
+            title: 'Link',
             fields: [
               {
                 title: 'URL',
                 name: 'href',
-                type: 'url'
+                type: 'url',
+                validation: Rule =>
+                  Rule.required().uri({scheme: ['http', 'https', 'mailto', 'tel'], allowRelative: true})
+              },
+              {
+                title: 'Open in new window',
+                name: 'blank',
+                type: 'boolean'
+              }
+            ]
+          },
+          {
+            name: 'button',
+            type: 'object',
+            title: 'Button',
+            blockEditor: {
+              icon: () => 'Btn',
+              render: buttonRender
+            },
+            fields: [
+              {
+                title: 'URL',
+                name: 'href',
+                type: 'url',
+                validation: Rule =>
+                  Rule.required().uri({scheme: ['http', 'https', 'mailto', 'tel'], allowRelative: true})
+              },
+              {
+                title: 'Open in new window',
+                name: 'blank',
+                type: 'boolean'
               }
             ]
           }
         ]
-      },
-      of: [{type: 'authorReference'}]
+      }
+      // of: [{type: 'authorReference'}]
     },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
@@ -48,6 +86,15 @@ export default {
     {
       type: 'mainImage',
       options: {hotspot: true}
+    },
+    {
+      type: 'youtube'
+    },
+    {
+      type: 'mytable'
+    },
+    {
+      type: 'iframeEmbed'
     }
   ]
 }
