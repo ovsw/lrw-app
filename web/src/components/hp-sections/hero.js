@@ -4,10 +4,10 @@ import {Container, jsx, Styled} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 import HeroVideoBg from './hero-video-bg'
 
-import {FaPhone} from 'react-icons/fa'
+import {FaPlay} from 'react-icons/fa'
 
 import VideoPoster from '../../images/rambling-pines-camp-intro-video.jpg'
-import BigLogo from '../../images/rambling-pines-art-logo-test-4.png'
+import BigLogo from '../../images/lrw-temp-simplified-logo-vector-bw.png'
 
 const Hero = () => {
   return (
@@ -57,26 +57,26 @@ const Hero = () => {
           fontWeight: 'normal',
           textShadow: '2px 2px 2px rgba(0,0,0,.5)',
           fontSize: [3, 4],
-          fontFamily: 'Lato',
-
+          fontFamily: 'heading2',
           mb: 0
-        }}>A Summer Day Camp Like no Other.</Styled.h1>
+        }}>Fun. Friends. Forever.</Styled.h1>
         <p sx={{
           textShadow: '1px 1px 2px rgba(0,0,0,.5)',
           fontSize: [1, 2],
           color: 'light',
-          fontFamily: 'Dosis',
           fontWeight: 'light',
-          mt: 0
-        }}>Your kids deserve the best. The best supervision, the best activities, the best friends, the best memories. </p>
+          mt: 3,
+          maxWidth: '2xl',
+          mx: 'auto'
+        }}>
+        Wonderful experiences await your child at Camp Laurelwood, Connecticut's Premier Jewish Co-ed Overnight Camp. </p>
         <a href='tel:6096225658' sx={{
           variant: 'buttons.3DAccent',
           display: 'inline-block',
           py: 3,
           mt: 4
         }}>
-          <FaPhone sx={{position: 'relative', top: '2px'}} />
-          Call us: (609) 622-5658
+          <FaPlay sx={{position: 'relative', top: '2px'}} /> &nbsp; Watch our Video
         </a>
       </Container>
     </Box>

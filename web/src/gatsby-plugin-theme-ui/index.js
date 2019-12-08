@@ -119,8 +119,9 @@ export default {
     // 'sans': '-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     // 'serif': 'Georgia, Cambria, "Times New Roman", Times, serif',
     // 'mono': 'Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace',
-    'heading': '"Dosis", sans-serif',
-    'body': '"Lato", sans-serif'
+    'heading': '"Amatic SC", cursive',
+    'heading2': '"skranji", sans-serif',
+    'body': '"Open Sans", sans-serif'
     // 'monospace': 'Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace'
   },
   'fontSizes': [
@@ -296,12 +297,14 @@ export default {
     },
     'h1': {
       ...sharedHeadingStyles,
-      'fontSize': 6,
+      'fontSize': 7,
       'mt': 2,
       'color': 'primary'
     },
     'h2': {
       ...sharedHeadingStyles,
+      fontFamily: 'heading2',
+      fontWeight: 'normal',
       'fontSize': 5,
       'mt': 2,
       'color': 'primary'
@@ -593,7 +596,6 @@ export default {
     navMain: {
       color: 'black',
       letterSpacing: '0.05rem',
-      fontSize: '17px',
       p: '10px',
       position: 'relative',
       overflow: 'hidden',
@@ -601,6 +603,8 @@ export default {
       transition: '.3s ease-out .1s',
       textTransform: 'uppercase',
       textDecoration: 'none',
+      fontSize: '26px',
+      fontFamily: 'heading',
       fontWeight: 'bold',
       '& span': {
         '&::before': {

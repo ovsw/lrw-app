@@ -7,7 +7,7 @@ import {Link} from 'gatsby'
 // components
 import MobileMenu from './mobile-menu'
 import MegaMenu from './mega-menu'
-import LogoImage from '../../images/rambling-pines-logo-retina.png'
+import LogoImage from '../../images/camp-laurelwood-logo.png'
 
 const MainNav = ({navStructure, showNav}) => {
   return (
@@ -56,13 +56,14 @@ const MainNav = ({navStructure, showNav}) => {
         <Flex as='ul' sx={{
           variant: 'lists.reset',
           m: 0,
-          pt: [3, 3, 2],
-          pb: [4, 4, 2],
+          pt: [3, 3, 1],
+          pb: [4, 4, 1],
           px: [0, 0, 0, 2, 3],
           display: ['block', 'block', 'flex'],
-          justifyContent: 'flex-end'
+          justifyContent: 'space-around'
         }}>
           {navStructure.map((mainMenuItem, i) => {
+            if (i === 4) { return }
             if (i === 2) {
               return (
                 <React.Fragment key={mainMenuItem.slug}>
@@ -80,7 +81,7 @@ const MainNav = ({navStructure, showNav}) => {
                       top: '-45px',
                       textAlign: 'center'}}>
                       <img src={LogoImage} sx={{
-                        width: '150px'
+                        width: '110px'
                       }} alt='Rambling Pines Logo' />
                     </Link></li>
                   <MegaMenu menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} key={mainMenuItem.slug} />

@@ -23,7 +23,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
       zIndex: 9999,
       boxShadow: '0 3px 12px rgba(0,0,0,0.3)'
     }}>
-      <Container className='HeaderContainer' sx={{pt: 3, pb: 0}}>
+      <Container className='HeaderContainer' sx={{pt: 2, pb: 0, maxWidth: '5xl'}}>
         <TopBar />
         <Flex sx={{position: ['static', 'relative'], justifyContent: 'space-between'}} className='MainNav'>
           <Box sx={{flex: 'flex: 1 1 0%'}}>

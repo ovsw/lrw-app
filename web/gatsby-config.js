@@ -120,7 +120,7 @@ module.exports = {
         ]
       },
       {
-        title: 'About us',
+        title: 'About Laurelwood',
         slug: '/about/',
         children: [
           {
@@ -205,6 +205,11 @@ module.exports = {
             ]
           }
         ]
+      },
+      {
+        title: 'Retreats & Events',
+        slug: '/private-events-and-retreats/',
+        children: []
       },
       {
         title: 'Staff',

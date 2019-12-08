@@ -37,7 +37,7 @@ class Megamenu extends React.Component {
     const {menuTitle, mainLink, menuColumns} = this.props
     const {megaMenuVisible} = this.state
     return (
-      <li sx={{mx: 4}}>
+      <li sx={{mx: 3}}>
         <NavLink
           onTouchStart={this.toggleMegaMenu}
           onMouseEnter={this.showMenu}

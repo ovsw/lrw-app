@@ -5,8 +5,9 @@ import {Layout as ThemeLayout} from 'theme-ui'
 import Header from './header'
 import Footer from './footer'
 
-//  TODO: Decide on body font
-import 'typeface-dosis'
+// import 'typeface-dosis'
+import 'typeface-amatic-sc'
+import 'typeface-skranji'
 import 'typeface-open-sans'
 import 'typeface-lato'
 
