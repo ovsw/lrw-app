@@ -1,24 +1,40 @@
 import React from 'react'
-import Header from './header'
 
-import '../styles/layout.css'
-import styles from './layout.module.css'
+import {Global} from '@emotion/core'
+import {Layout as ThemeLayout} from 'theme-ui'
+import Header from './header'
+import Footer from './footer'
+
+//  TODO: Decide on body font
+import 'typeface-dosis'
+import 'typeface-open-sans'
+import 'typeface-lato'
 
 const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
-  <>
+  <ThemeLayout>
+    <Global styles={theme => ({
+      '*': {boxSizing: 'border-box'},
+      body: {
+        margin: 0,
+        overflow: showNav ? 'hidden' : 'auto'
+      },
+      img: {
+        maxWidth: '100%'
+      },
+      '.slick-track': {
+        display: 'flex',
+        '.slick-slide': {
+          display: 'flex',
+          height: 'auto'
+        }
+      }
+    })} />
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
-    <div className={styles.content}>{children}</div>
-    <footer className={styles.footer}>
-      <div className={styles.footerWrapper}>
-        <div className={styles.siteInfo}>
-          &copy; {new Date().getFullYear()}, Built with <a href='https://www.sanity.io'>Sanity</a>{' '}
-          &amp;
-          {` `}
-          <a href='https://www.gatsbyjs.org'>Gatsby</a>
-        </div>
-      </div>
-    </footer>
-  </>
+
+    <>{children}</>
+
+    <Footer />
+  </ThemeLayout>
 )
 
 export default Layout
