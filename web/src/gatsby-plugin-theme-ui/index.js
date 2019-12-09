@@ -249,8 +249,7 @@ export default {
       fontSize: '2'
     },
     'a': {
-      'color': 'secondary',
-      'textDecoration': 'none',
+      'color': 'primary',
       'fontWeight': 'bold',
       ':hover': {
         'textDecoration': 'underline',
@@ -272,13 +271,13 @@ export default {
       fontFamily: 'heading2',
       fontWeight: 'normal',
       'fontSize': 6,
-      'mt': 2,
+      'mt': 4,
       'color': 'primary'
     },
     'h3': {
       ...sharedHeadingStyles,
       'fontSize': 5,
-      fontWeight: 'normal',
+      fontWeight: 'bold',
       'mt': 3,
       'color': 'primary'
     },
@@ -303,6 +302,17 @@ export default {
       'border': 0,
       'height': '1px',
       'm': 3
+    },
+    'table': {
+      width: '100%',
+      textAlign: 'left',
+      'tr': {
+        'td': {
+          borderTop: '2px solid',
+          borderColor: 'gray.3',
+          padding: 2
+        }
+      }
     }
   },
   text: {

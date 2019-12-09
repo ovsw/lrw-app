@@ -23,23 +23,33 @@ module.exports = {
                 slug: '/programs/',
                 children: [
                   {
-                    title: 'Overnight Camp',
-                    slug: '/programs/pine-cone-camp/',
+                    title: 'Trial Sessions',
+                    slug: '/programs/trial-sessions/',
                     children: []
                   },
                   {
-                    title: 'Day Camp',
+                    title: 'Overnight Camp (2nd-9th)',
+                    slug: '/programs/overnight-camp/',
+                    children: []
+                  },
+                  {
+                    title: 'Day Camp (K-7th)',
                     slug: '/programs/day-camp/',
                     children: []
                   },
                   {
-                    title: 'Teen Camp',
-                    slug: '/programs/teen-camp/',
+                    title: 'Bonim Travel (10th)',
+                    slug: '/programs/bonim-travel-program/',
                     children: []
                   },
                   {
-                    title: 'Leader in Training',
-                    slug: '/programs/leader-in-training/',
+                    title: 'SIT Program',
+                    slug: '/programs/sit-program/',
+                    children: []
+                  },
+                  {
+                    title: 'Specialty Camps',
+                    slug: '/programs/specialty-camps/',
                     children: []
                   }
                 ]
@@ -49,23 +59,18 @@ module.exports = {
                 slug: '/activities/',
                 children: [
                   {
-                    title: 'Clubs & Electives',
-                    slug: '/activities/clubs-and-electives/',
+                    title: 'Trips & Special Events',
+                    slug: '/activities/trips-and-special-events',
                     children: []
                   },
                   {
-                    title: 'Learn to Swim',
-                    slug: '/activities/learn-to-swim/',
+                    title: 'Jewish Life',
+                    slug: '/activities/jewish-life/',
                     children: []
                   },
                   {
-                    title: 'Calendar',
-                    slug: '/activities/calendar/',
-                    children: []
-                  },
-                  {
-                    title: 'Special Events',
-                    slug: '/activities/special-events/',
+                    title: 'A Typical Day',
+                    slug: '/activities/a-typical-day/',
                     children: []
                   }
                 ]
@@ -76,33 +81,13 @@ module.exports = {
             title: 'column 2',
             children: [
               {
-                title: 'Transportation',
-                slug: '/transportation/',
+                title: 'Food, Helth and Safety',
+                slug: '/food-health-and-safety/',
                 children: []
               },
               {
-                title: 'Lunch',
-                slug: '/lunch/',
-                children: []
-              },
-              {
-                title: 'Beforecare & Aftercare',
-                slug: '/beforecare-aftercare/',
-                children: []
-              },
-              {
-                title: 'Dates & Rates',
-                slug: '/dates-and-rates/',
-                children: []
-              },
-              {
-                title: 'Reviews',
-                slug: '/reviews/',
-                children: []
-              },
-              {
-                title: 'Tuition Assistance',
-                slug: '/tuition-assistance/',
+                title: 'Tours & Events',
+                slug: '/prospective-families-tours-and-events/',
                 children: []
               },
               {
@@ -111,8 +96,33 @@ module.exports = {
                 children: []
               },
               {
-                title: 'New for 2020',
-                slug: '/new-for-2020/',
+                title: 'Dates & Rates - Overnight',
+                slug: '/dates-and-rates-overnight-camp/',
+                children: []
+              },
+              {
+                title: 'Dates & Rates - Day Camp',
+                slug: '/dates-and-rates-day-camp/',
+                children: []
+              },
+              {
+                title: 'Tuition Assistance',
+                slug: '/tuition-assistance/',
+                children: []
+              },
+              {
+                title: 'Schedule a Tour',
+                slug: '/schedule-a-tour/',
+                children: []
+              },
+              {
+                title: 'Request Info',
+                slug: '/request-info/',
+                children: []
+              },
+              {
+                title: 'Enroll Now',
+                slug: '/enroll-now/',
                 children: []
               }
             ]
@@ -126,6 +136,11 @@ module.exports = {
           {
             title: 'column 1',
             children: [
+              {
+                title: 'The Laurelwood Experience',
+                slug: '/the-laurelwood-experience/',
+                children: []
+              },
               {
                 title: 'Our Directors',
                 slug: '/our-directors/',

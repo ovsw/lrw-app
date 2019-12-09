@@ -106,6 +106,10 @@ export default () =>
                         .title('Tours & Events')
                         .schemaType('page'),
                       S.documentListItem()
+                        .id('faqs')
+                        .title('FAQs')
+                        .schemaType('page'),
+                      S.documentListItem()
                         .id('datesAndRatesProspective')
                         .title('Overnight Dates & Rates')
                         .schemaType('page'),
@@ -116,10 +120,6 @@ export default () =>
                       S.documentListItem()
                         .id('tuitionAssistance')
                         .title('Tuition Assistance')
-                        .schemaType('page'),
-                      S.documentListItem()
-                        .id('faqs')
-                        .title('Reviews')
                         .schemaType('page'),
                       S.documentListItem()
                         .id('scheduleTour')

@@ -54,10 +54,15 @@ export default {
       name: 'section',
       type: 'string',
       options: {
-        list: ['Prospective Families', 'About us', 'Current Families'],
+        list: [
+          {title: 'Prospective Families', value: 'Prospective Families'},
+          {title: 'About us', value: 'About Laurelwood'},
+          {title: 'Current Families', value: 'Current Families'}
+        ],
         layout: 'radio',
         direction: 'horizontal'
-      }
+      },
+      validation: Rule => Rule.error('You have to select which side menu to show for this page.').required()
     },
     {
       name: 'headerImage',

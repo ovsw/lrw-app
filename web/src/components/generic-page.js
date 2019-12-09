@@ -13,7 +13,7 @@ function GenericPage ({_rawBody, title, section, headerImage = null}) {
     <div sx={{marginTop: '7rem'}}>
       {headerImage && headerImage && (
         <div sx={{
-          paddingBottom: ['calc(12 / 16 * 100%)', 'calc(10 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(5 / 16 * 100%)'],
+          paddingBottom: ['calc(12 / 16 * 100%)', 'calc(10 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)'],
           position: 'relative',
           backgroundImage: `url(${headerImage.asset.metadata.lqip})`,
           backgroundRepeat: 'no-repeat',
