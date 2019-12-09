@@ -142,18 +142,29 @@ module.exports = {
                 children: []
               },
               {
-                title: 'Our Directors',
-                slug: '/our-directors/',
-                children: []
-              },
-              {
-                title: 'Our Staff',
+                title: 'Meet our Staff',
                 slug: '/our-staff/',
+                children: [
+                  {
+                    title: 'Letter From the Director',
+                    slug: 'welcome-letter-from-the-director',
+                    children: []
+                  },
+                  {
+                    title: 'Board of Directors',
+                    slug: 'board-of-directors',
+                    children: []
+                  }
+                ]
+              },
+              {
+                title: 'ACA Accreditation',
+                slug: '/aca-accreditation/',
                 children: []
               },
               {
-                title: 'History',
-                slug: '/history/',
+                title: 'Camp Newsletter',
+                slug: '/camp-newsletter/',
                 children: []
               }
             ]
@@ -162,15 +173,26 @@ module.exports = {
             title: 'column 2',
             children: [
               {
+                title: 'History',
+                slug: '/history/',
+                children: []
+              },
+              {
                 title: 'Location',
                 slug: '/location/',
                 children: []
               },
               {
-                title: 'ACA Accreditation',
-                slug: '/aca-accreditation/',
+                title: 'Alumni',
+                slug: '/alumni/',
+                children: []
+              },
+              {
+                title: 'Alumni Events',
+                slug: '/alumni-events/',
                 children: []
               }
+
             ]
           }
         ]
@@ -183,38 +205,44 @@ module.exports = {
             title: 'column 1',
             children: [
               {
-                title: 'Lunch Menu',
-                slug: '/lunch-menu',
+                title: 'Upcoming Events',
+                slug: '/upcoming-events/',
                 children: []
               },
               {
-                title: 'Camper Photo App',
-                slug: '/camper-photo-app/',
+                title: 'Parent Log-in',
+                slug: '/parent-log-in/',
                 children: []
               },
               {
-                title: 'Camp Store',
-                slug: 'https://www.bunkline.com/category-s/602.htm',
+                title: 'Donate',
+                slug: '/donate/',
+                children: []
+              },
+              {
+                title: 'Refer a Friend',
+                slug: '/refer-a-friend/',
                 children: []
               }
+
             ]
           },
           {
             title: 'column 2',
             children: [
               {
-                title: 'New for 2020',
-                slug: '/new-for-2020/',
+                title: 'What\'s New in 2020',
+                slug: '/whhahts-new/',
                 children: []
               },
               {
-                title: 'Refer A Family',
-                slug: '/refer-a-family/',
+                title: 'Camp Store',
+                slug: '/camp-store/',
                 children: []
               },
               {
-                title: 'Parent Login',
-                slug: '/login-to-campminder',
+                title: 'Amazon Smile',
+                slug: '/amazon-smile/',
                 children: []
               }
             ]
