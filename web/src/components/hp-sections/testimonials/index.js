@@ -112,7 +112,7 @@ const TestimonialsSection = () => {
           borderRadius: '100%',
           '.slick-active & ': {
             bg: 'accent',
-            color: 'primaryDark',
+            color: 'light',
             boxShadow: '0 0 6px #008080'
           }
         }}
@@ -131,7 +131,7 @@ const TestimonialsSection = () => {
       position: 'relative',
       zIndex: '2'
     }}>
-      <Styled.h1 as='h2' sx={{textAlign: 'center'}}>What Parents Say</Styled.h1>
+      <Styled.h1 as='h2' sx={{textAlign: 'center', color: 'accent'}}>What Parents Say</Styled.h1>
       <Container sx={{maxWidth: '6xl', px: ['2.8rem', 5, 0]}}>
         <Slider {...settings}>
           {testimonialsContentTemp.map(testimonial => <TestimonialItem {...testimonial} key={testimonial.name} />)}
@@ -143,32 +143,32 @@ const TestimonialsSection = () => {
 
 const testimonialsContentTemp = [
   {
-    name: 'Roger F.',
-    text: "I can attest to the quality of service this camp provides. You will get your money's worth, thanks in part to a stellar crew who give it their all. A family-run business who genuinely care about the business they've built over the years."
+    name: 'Beth F. Milles',
+    text: 'Camp Laurelwood has been a source of great joy and wonderful memories for my family - happiness abounds at camp.'
   },
   {
-    name: 'Suzan M.',
-    text: ' I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.'
+    name: 'Laura Stuken',
+    text: 'They always provide incredible warmth to the children and their parents. If you are looking for a camp that isn’t large where your child will get lost in, an extremely inclusive group of children and counselors, with both sports and arts, this is the best camp.'
   },
   {
-    name: 'Suzan M.',
-    text: ' I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.'
+    name: 'Emily Cooper',
+    text: 'Truly a magical place that fills me with more happiness than anywhere else in the world, and I wouldn\'t be the person I am today with out camp and the people who help make it home'
   },
   {
-    name: 'Suzan M.',
-    text: ' I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.'
+    name: 'Jenna Turner',
+    text: 'This camp is the best. The Camp has such a warm close knit feel. The staff is amazing the activities are great. Your camper is surely not just a number here.'
   },
   {
-    name: 'Suzan M.',
-    text: ' I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.'
+    name: 'Marci L. Marcus',
+    text: 'This camp is the best. The Camp has such a warm close knit feel. The staff is amazing the activities are great. Your camper is surely not just a number here.'
   },
   {
-    name: 'Suzan M.',
-    text: ' I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.'
+    name: 'Marci L. Marcus',
+    text: 'This camp is the best. The Camp has such a warm close knit feel. The staff is amazing the activities are great. Your camper is surely not just a number here.'
   },
   {
-    name: 'Suzan M.',
-    text: ' I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.'
+    name: 'Marci L. Marcus',
+    text: 'This camp is the best. The Camp has such a warm close knit feel. The staff is amazing the activities are great. Your camper is surely not just a number here.'
   }
 ]
 

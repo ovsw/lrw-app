@@ -57,9 +57,9 @@ class Megamenu extends React.Component {
           sx={{
             display: megaMenuVisible ? 'block' : 'none',
             position: 'absolute',
-            top: '3.2rem',
+            top: '3.7rem',
             textAlign: 'left',
-            bg: 'primary',
+            bg: 'background',
             color: 'white',
             zIndex: 900,
             boxShadow: '3px 3px 6px rgba(0,0,0,0.2)'
@@ -85,7 +85,7 @@ class Megamenu extends React.Component {
                       {item.title}
                     </NavLink>
                     {item.children !== undefined && item.children.length > 0 && (
-                      <ul>
+                      <ul sx={{color: 'brown'}}>
                         {item.children.map(child => (
                           <li key={child.slug}>
                             <NavLink to={child.slug} onClick={this.onNavClick} sx={{variant: 'links.navSub2'}}>

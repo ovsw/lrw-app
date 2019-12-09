@@ -33,9 +33,10 @@ const MainContent = () => {
   )
   return (
     <div sx={{
-      mx: [0, 5, 4, 5, 6]
+      // mx: [0, 5, 4, 5, 6]
     }}>
-      <Img fluid={foodImage.childImageSharp.fluid} />
+      {/* <Img fluid={foodImage.childImageSharp.fluid} /> */}
+      <img src='https://via.placeholder.com/726x600' sx={{pr: 4}} />
     </div>
   )
 }
@@ -49,7 +50,7 @@ const Sidebar = () => {
       <Link to='/' sx={{variant: 'buttons.3D', display: 'inline-block', my: 3, mr: 3, position: 'relative', pl: '3.5rem'}}>
         <FaHamburger sx={{position: 'absolute', top: '0.7rem', left: '1rem', fontSize: 4}} /> Sample Lunch Menu
       </Link>
-      <a href='tel:6094661212' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (609) 466-1212</a>
+      {/* <a href='tel:2034213736' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (203) 421-3736</a> */}
     </div>
   )
 }

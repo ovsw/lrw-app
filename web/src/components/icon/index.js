@@ -5,6 +5,8 @@ import PineCone from './pine-cone'
 import DayCamp from './children-playing-blocks'
 import Teenagers from './teenagers'
 import Leader from './leader'
+import Sun from './sun'
+import Moon from './moon'
 
 function Icon (props) {
   switch (props.symbol) {
@@ -20,6 +22,10 @@ function Icon (props) {
       return <Teenagers />
     case 'leader':
       return <Leader />
+    case 'sun':
+      return <Sun />
+    case 'moon':
+      return <Moon />
     default:
       return <span>Unknown icon: {props.symbol}</span>
   }

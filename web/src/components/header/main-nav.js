@@ -82,7 +82,7 @@ const MainNav = ({navStructure, showNav}) => {
                       textAlign: 'center'}}>
                       <img src={LogoImage} sx={{
                         width: '110px'
-                      }} alt='Rambling Pines Logo' />
+                      }} alt='Camp Laurelwood Logo' />
                     </Link></li>
                   <MegaMenu menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} key={mainMenuItem.slug} />
                 </React.Fragment>

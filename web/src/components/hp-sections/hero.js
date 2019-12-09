@@ -50,7 +50,7 @@ const Hero = () => {
         // my: [3, 4, 4, 3, 5]
         // bg: 'rgba(0,0,0,.32)'
       }}>
-        <img src={BigLogo} alt='Rambling Pines Big Logo' />
+        <img src={BigLogo} alt='Camp Laurelwood Big Logo' />
         <Styled.h1 sx={{
           textTransform: 'lowercase',
           color: 'white',

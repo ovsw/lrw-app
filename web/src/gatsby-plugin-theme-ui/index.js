@@ -4,6 +4,7 @@
 
 import SectionBorderTop from '../images/torn-bg-white-t.png'
 import SectionBorderBottom from '../images/torn-bg-white-b.png'
+import WhitePaper from '../images/white-paper-bg2.jpg'
 
 const sharedButtonStyles = {
   'py': 3,
@@ -43,54 +44,19 @@ export default {
     '1280px',
     '1440px'
   ],
-  // 'colors': {
-  //   'text': '#6c6b73',
-  //   'background': '#fbf8ef',
-  //   'primary': '#5b9a42',
-  //   'secondary': '#8bcb6f',
-  //   'accent': '#f7db54',
-  //   'accentDark': '#c1aa1d',
-  //   'accentLight': '#ffff86',
-  //   'muted': '#efe9d7',
-  //   'primaryLight': '#8bcb6f',
-  //   'primaryDark': '#2b6b15',
-  //   'primaryHover': '#2b6b15',
-  //   'textMuted': '#9da2a0', // #8b8a90
-  //   // 'success': '#9ae6b4', // green
-  //   // 'info': '#63b3ed', // blue
-  //   // 'warning': '#faf089', //  yellow
-  //   // 'danger': '#feb2b2', // red
-  //   'white': '#fff',
-  //   'light': '#f7fafc',
-  //   'grayDark': '#2d3748',
-  //   'dark': '#2d3748',
-  //   'black': '#282828',
-  //   'transparent': 'transparent',
-  //   'gray': [
-  //     null,
-  //     '#f7fafc',
-  //     '#edf2f7',
-  //     '#e2e8f0',
-  //     '#cbd5e0',
-  //     '#a0aec0',
-  //     '#718096',
-  //     '#4a5568',
-  //     '#2d3748',
-  //     '#1a202c'
-  //   ]
-  // },
   'colors': {
     'text': '#6c6b73',
-    'background': '#fbf8ef',
-    'primary': '#008080',
+    'background': '#d2edf6',
+    'primary': '#6ebf34',
     'secondary': '#4cb0af',
-    'accent': '#f7db54',
-    'accentDark': '#c1aa1d',
+    'accent': '#ff6644',
+    'accentDark': '#c53319',
     'accentLight': '#ffff86',
-    'muted': '#efe9d7',
-    'primaryLight': '#4cb0af',
-    'primaryDark': '#005354',
-    'primaryHover': '#005354',
+    'muted': '#8c8577',
+    'primaryLight': '#a1f266',
+    'primaryDark': '#398e00',
+    'primaryDarker': '#286500',
+    'primaryHover': '#398e00',
     'textMuted': '#9da2a0', // #8b8a90
     // 'success': '#9ae6b4', // green
     // 'info': '#63b3ed', // blue
@@ -99,7 +65,7 @@ export default {
     'white': '#fff',
     'light': '#f7fafc',
     'grayDark': '#2d3748',
-    'dark': '#2d3748',
+    'dark': '#592203',
     'black': '#282828',
     'transparent': 'transparent',
     'gray': [
@@ -305,20 +271,20 @@ export default {
       ...sharedHeadingStyles,
       fontFamily: 'heading2',
       fontWeight: 'normal',
-      'fontSize': 5,
+      'fontSize': 6,
       'mt': 2,
       'color': 'primary'
     },
     'h3': {
       ...sharedHeadingStyles,
-      'fontSize': 4,
+      'fontSize': 5,
       fontWeight: 'normal',
       'mt': 3,
       'color': 'primary'
     },
     'h4': {
       ...sharedHeadingStyles,
-      'fontSize': 3,
+      'fontSize': 4,
       'color': 'primary'
     },
     'h5': {
@@ -453,7 +419,7 @@ export default {
       'borderBottomWidth': '4px',
       'borderBottomStyle': 'solid',
       'borderBottomColor': 'accentDark',
-      'color': 'primaryDark',
+      'color': 'white',
       'fontWeight': 'bold',
       'borderRadius': 'default',
       'transition': 'transform 0.3s ease-in-out',
@@ -589,12 +555,12 @@ export default {
       'textDecoration': 'none',
       fontSize: '13px',
       '&:hover': {
-        color: 'accent',
+        color: 'light',
         bg: 'primary'
       }
     },
     navMain: {
-      color: 'black',
+      color: '#592203',
       letterSpacing: '0.05rem',
       p: '10px',
       position: 'relative',
@@ -610,7 +576,7 @@ export default {
         '&::before': {
           width: '100%',
           height: '2px',
-          background: '#4cb0af',
+          background: '#8a4c2d',
           content: '""',
           position: 'absolute',
           left: '0',
@@ -622,7 +588,7 @@ export default {
           width: '30px',
           height: '4px',
           borderRadius: '999px',
-          background: '#4cb0af',
+          background: '#8a4c2d',
           content: '""',
           position: 'absolute',
           left: '50%',
@@ -634,7 +600,7 @@ export default {
       '&::before': {
         width: '2px',
         height: '100%',
-        background: '#4cb0af',
+        background: '#8a4c2d',
         content: '""',
         position: 'absolute',
         left: '0',
@@ -645,7 +611,7 @@ export default {
       '&::after': {
         width: '2px',
         height: '100%',
-        background: '#4cb0af',
+        background: '#8a4c2d',
         content: '""',
         position: 'absolute',
         right: '0',
@@ -670,24 +636,24 @@ export default {
       }
     },
     'navSub': {
-      color: 'light',
+      color: 'primaryDarker',
       textDecoration: 'none',
       textTransform: 'uppercase',
       fontSize: '1',
       letterSpacing: '0.01rem',
       '&:hover': {
-        color: 'accent',
+        color: 'dark',
         textDecoration: 'underline'
       }
     },
     'navSub2': {
-      color: 'gray.3',
+      color: 'primaryDarker',
       textDecoration: 'none',
       textTransform: 'uppercase',
       fontSize: '1',
-      fontWeight: 'bold',
       '&:hover': {
-        color: 'accent'
+        color: 'dark',
+        textDecoration: 'underline'
       }
     },
     'sidebarNav': {
@@ -709,16 +675,28 @@ export default {
     },
     'programListLink': {
       textDecoration: 'none',
+      transition: 'transform 0.1s ease-out',
+      boxShadow: '0 0 12px -2px rgba(0,0,0,0.1)',
+      background: `url(${WhitePaper})`,
+      borderRadius: '7px',
       bg: 'white',
-      pt: 3,
-      pb: 2,
-      px: 3,
+      p: 3,
       m: 2,
       color: 'primary',
       textAlign: 'center',
       display: 'flex',
-      flexDirection: 'column',
       justifyContent: 'space-evenly',
+      '&:hover': {
+        boxShadow: '0 0 12px -2px rgba(0,0,0,0.2)',
+        transform: 'scale(1.1)',
+        '.iconBg': {
+          bg: 'bg',
+          color: 'primaryDark',
+          'svg': {
+            transform: 'scale(1.9)'
+          }
+        }
+      },
       '& p': {
         color: 'text'
       }

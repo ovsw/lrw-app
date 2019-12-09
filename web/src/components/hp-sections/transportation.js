@@ -15,7 +15,7 @@ const TransportationSection = () => {
   return (
     <section sx={{variant: 'sections.hpSectionLight'}}>
       <SectionWithSidebar mainContent={<MainContent />} sidebar={<Sidebar />} />
-      <Container sx={{maxWidth: '6xl'}}>
+      {/* <Container sx={{maxWidth: '6xl'}}>
         <Styled.h1 as='h3' sx={{fontWeight: 'normal', mb: 4}}>Transporation Areas</Styled.h1>
         <Flex sx={{
           flexWrap: 'wrap',
@@ -60,7 +60,7 @@ const TransportationSection = () => {
             <p>Kendall Park, Plainsboro, South Brunswick</p>
           </Box>
         </Flex>
-      </Container>
+      </Container> */}
     </section>
   )
 }
@@ -81,7 +81,8 @@ const MainContent = () => {
   )
   return (
     <>
-      <Img fluid={transportationImage.childImageSharp.fluid} />
+      {/* <Img fluid={transportationImage.childImageSharp.fluid} /> */}
+      <img src='https://via.placeholder.com/726' sx={{paddingLeft: 4}} />
     </>
   )
 }
@@ -89,14 +90,16 @@ const MainContent = () => {
 const Sidebar = () => {
   return (
     <div sx={{p: {lineHeight: 'snug'}}}>
-      <Styled.h1 as='h2'>Door to Door Transportation</Styled.h1>
+      <Styled.h1 as='h2'>First Section Title Here</Styled.h1>
       <p>Parents wish for a quality summer day camp near them. With door to door busing, it is.</p>
       <p>Transportation is provided using air-conditioned, 24 passenger mini-buses.</p>
       <p>All buses are professionally driven and have seatbelts. There is a bus aid on each bus. Transportation is included in the camp tuition.</p>
-      <Link to='/transportation/' sx={{variant: 'buttons.3D', display: 'inline-block', my: 3, mr: 3, position: 'relative', pl: '3.5rem'}}>
+      {/* <Link to='/transportation/' sx={{variant: 'buttons.3D', display: 'inline-block', my: 3, mr: 3, position: 'relative', pl: '3.5rem'}}>
         <FaMap sx={{position: 'absolute', top: '0.7rem', left: '1rem', fontSize: 4}} /> Read More
-      </Link>
-      <a href='tel:6094661212' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (609) 466-1212</a>
+      </Link> */}
+      <a href='tel:2034213736' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}>
+        <FaPhone /> Call Us: (203) 421-3736
+      </a>
     </div>
   )
 }

@@ -23,7 +23,7 @@ module.exports = {
                 slug: '/programs/',
                 children: [
                   {
-                    title: 'Pine Cone Camp',
+                    title: 'Overnight Camp',
                     slug: '/programs/pine-cone-camp/',
                     children: []
                   },
@@ -199,7 +199,7 @@ module.exports = {
               },
               {
                 title: 'Parent Login',
-                slug: 'https://ramblingpines.campintouch.com/v2/login/login.aspx',
+                slug: '/login-to-campminder',
                 children: []
               }
             ]
