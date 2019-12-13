@@ -206,7 +206,7 @@ module.exports = {
             children: [
               {
                 title: 'Upcoming Events',
-                slug: '/upcoming-events/',
+                slug: '/upcoming-events-current-families/',
                 children: []
               },
               {
@@ -231,8 +231,8 @@ module.exports = {
             title: 'column 2',
             children: [
               {
-                title: 'What\'s New in 2020',
-                slug: '/whhahts-new/',
+                title: 'What\'s New',
+                slug: '/whats-new-on-campus/',
                 children: []
               },
               {
