@@ -1,15 +1,20 @@
 /** @jsx jsx */
-import React from 'react' // eslint-disable-line
+import React, {useState} from 'react' // eslint-disable-line
 import {Container, jsx, Styled} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 import HeroVideoBg from './hero-video-bg'
+import ModalVideo from 'react-modal-video'
 
 import {FaPlay} from 'react-icons/fa'
 
 import VideoPoster from '../../images/rambling-pines-camp-intro-video.jpg'
 import BigLogo from '../../images/lrw-temp-simplified-logo-vector-bw.png'
 
+import '../../../node_modules/react-modal-video/css/modal-video.min.css'
+
 const Hero = () => {
+  const [playVideo, setPlayVideo] = useState(false)
+
   return (
     <Box as='section' pt={[4, 4, 5, 5, 6]} pb={[2, 3, 4, 6]} mt={5} sx={{
       textAlign: 'center',
@@ -70,14 +75,16 @@ const Hero = () => {
           mx: 'auto'
         }}>
         Wonderful experiences await your child at Camp Laurelwood, Connecticut's Premier Jewish Co-ed Overnight Camp. </p>
-        <a href='tel:6096225658' sx={{
+        <button onClick={() => setPlayVideo(true)} sx={{
           variant: 'buttons.3DAccent',
           display: 'inline-block',
           py: 3,
           mt: 4
         }}>
           <FaPlay sx={{position: 'relative', top: '2px'}} /> &nbsp; Watch our Video
-        </a>
+        </button>
+        <ModalVideo channel='youtube' isOpen={playVideo} videoId='gcJfsUztrGE' onClose={() => setPlayVideo(!playVideo)} />
+
       </Container>
     </Box>
   )
