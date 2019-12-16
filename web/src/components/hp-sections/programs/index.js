@@ -102,8 +102,8 @@ const MainContent = () => {
       {programs.map(program => {
         const width = program.layout ? '100%' : '1/2'
         return (
-          <Box sx={{width: ['full', 'full', `${width}`], display: 'flex'}}>
-            <ProgramItem key={program.name} {...program} />
+          <Box key={program.name} sx={{width: ['full', 'full', `${width}`], display: 'flex'}}>
+            <ProgramItem {...program} />
           </Box>
         )
       })}
