@@ -43,7 +43,7 @@ const IndexPage = props => {
   }
 
   return (
-    <Layout>
+    <>
       <SEO
         title={site.title}
         description={site.description}
@@ -63,7 +63,7 @@ const IndexPage = props => {
             browseMoreHref='/archive/'
           />
         )} */}
-    </Layout>
+    </>
   )
 }
 
