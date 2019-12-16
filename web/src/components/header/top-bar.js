@@ -14,20 +14,22 @@ const TopBar = () => {
           textAlign: 'right',
           pr: 5,
           '& a': {
-            mr: 3
+            mr: 2
           }
         }}>
           <Link to='/dates-and-rates/' sx={{variant: 'links.topBar'}}>Dates &amp; Rates</Link>
           {/* <Link to='/'>Schedule Tour</Link> */}
           <Link to='/interactive-map/' sx={{variant: 'links.topBar'}}>Interactive Map</Link>
+          <Link to='/news/' sx={{variant: 'links.topBar'}}>News</Link>
         </Box>
         <Box sx={{
           width: '1/2',
           pl: '90px',
           '& a': {
-            ml: 4
+            ml: 2
           }
         }}>
+          <Link to='/staff/' sx={{variant: 'links.topBar'}} rel='noopener noreferrer' target='_blank'>Staff</Link>
           <Link to='/request-info/' sx={{variant: 'links.topBar'}} rel='noopener noreferrer' target='_blank'>Request Info</Link>
           <a href='https://laurelwood.campintouch.com/ui/forms/application/camper/App' rel='noopener noreferrer' sx={{variant: 'links.topBar'}}target='_blank'>Enroll Now</a>
         </Box>
