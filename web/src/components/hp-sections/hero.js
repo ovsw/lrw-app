@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, {useState} from 'react' // eslint-disable-line
 import {Container, jsx, Styled} from 'theme-ui'
-import {Box, Flex} from '@theme-ui/components'
+import {Box} from '@theme-ui/components'
 import HeroVideoBg from './hero-video-bg'
 import ModalVideo from 'react-modal-video'
 
@@ -13,7 +13,7 @@ import BigLogo from '../../images/lrw-temp-simplified-logo-vector-bw.png'
 import '../../../node_modules/react-modal-video/css/modal-video.min.css'
 
 const Hero = () => {
-  const [playVideo, setPlayVideo] = useState(false)
+  const [playFullVideo, setPlayFullVideo] = useState(false)
 
   return (
     <Box as='section' pt={[4, 4, 5, 5, 6]} pb={[2, 3, 4, 6]} mt={5} sx={{
@@ -46,7 +46,7 @@ const Hero = () => {
         left: 0,
         zIndex: 0
       }}>
-        <HeroVideoBg poster='https://rbpvideo-ac97.kxcdn.com/rambling-pines-camp-intro-video.jpg' />
+        <HeroVideoBg playFullVideo={playFullVideo} poster='https://rbpvideo-ac97.kxcdn.com/rambling-pines-camp-intro-video.jpg' />
       </div>
       <Container className='container' sx={{
         maxWidth: '5xl',
@@ -64,7 +64,7 @@ const Hero = () => {
           fontSize: [3, 4],
           fontFamily: 'heading2',
           mb: 0
-        }}>Fun. Friends. Forever.</Styled.h1>
+        }} onClick={() => console.log('click')}>Fun. Friends. Forever.</Styled.h1>
         <p sx={{
           textShadow: '1px 1px 2px rgba(0,0,0,.5)',
           fontSize: [1, 2],
@@ -75,7 +75,7 @@ const Hero = () => {
           mx: 'auto'
         }}>
         Wonderful experiences await your child at Camp Laurelwood, Connecticut's Premier Jewish Co-ed Overnight Camp. </p>
-        <button onClick={() => setPlayVideo(true)} sx={{
+        <button onClick={() => setPlayFullVideo(true)} sx={{
           variant: 'buttons.3DAccent',
           display: 'inline-block',
           py: 3,
@@ -83,7 +83,7 @@ const Hero = () => {
         }}>
           <FaPlay sx={{position: 'relative', top: '2px'}} /> &nbsp; Watch our Video
         </button>
-        <ModalVideo channel='youtube' isOpen={playVideo} videoId='gcJfsUztrGE' onClose={() => setPlayVideo(!playVideo)} />
+        <ModalVideo channel='youtube' isOpen={playFullVideo} videoId='gcJfsUztrGE' onClose={() => setPlayFullVideo(!setPlayFullVideo)} />
 
       </Container>
     </Box>
