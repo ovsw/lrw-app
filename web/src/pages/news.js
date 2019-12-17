@@ -1,13 +1,14 @@
-import React from 'react'
+/** @jsx jsx */
+import React from 'react' // eslint-disable-line
+import {jsx, Styled, Container} from 'theme-ui'
+import {Box, Flex} from '@theme-ui/components'
+
 import {graphql} from 'gatsby'
 import {mapEdgesToNodes} from '../lib/helpers'
-import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
-import Container from '../components/container'
+import BlogPostPreviewList from '../components/blog-post-preview-list'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-
-import {responsiveTitle1} from '../components/typography.module.css'
 
 export const query = graphql`
   query ArchivePageQuery {
@@ -39,22 +40,22 @@ const ArchivePage = props => {
 
   if (errors) {
     return (
-      <Layout>
+      <>
         <GraphQLErrorList errors={errors} />
-      </Layout>
+      </>
     )
   }
 
   const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
 
   return (
-    <Layout>
-      <SEO title='Archive' />
+    <>
+      <SEO title='News' />
       <Container>
-        <h1 className={responsiveTitle1}>Archive</h1>
-        {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
+        <Styled.h1>News</Styled.h1>
+        {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} />}
       </Container>
-    </Layout>
+    </>
   )
 }
 

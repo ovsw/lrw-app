@@ -223,10 +223,10 @@ export default () =>
                 .title('Private Events & Retreats')
                 .schemaType('page')
             ])),
-      // S.listItem()
-      //   .title('Blog posts')
-      //   .schemaType('post')
-      //   .child(S.documentTypeList('post').title('Blog posts')),
+      S.listItem()
+        .title('News Items')
+        .schemaType('post')
+        .child(S.documentTypeList('post').title('News Items')),
       // S.listItem()
       //   .title('Authors')
       //   .icon(MdPerson)
