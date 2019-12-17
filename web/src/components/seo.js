@@ -58,14 +58,6 @@ function SEO ({description, lang, meta, keywords, title, image}) {
                 content: metaDescription
               }
             ]
-              .concat(
-                keywords && keywords.length > 0
-                  ? {
-                    name: 'keywords',
-                    content: keywords.join(', ')
-                  }
-                  : []
-              )
               .concat(meta)}
           >
             <link rel='stylesheet' href='https://use.typekit.net/iwc3izh.css' />
@@ -79,14 +71,12 @@ function SEO ({description, lang, meta, keywords, title, image}) {
 SEO.defaultProps = {
   lang: 'en',
   meta: [],
-  keywords: []
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string
 }
 
@@ -97,10 +87,6 @@ const detailsQuery = graphql`
     site: sanitySiteSettings(_id: {eq: "siteSettings"}) {
       title
       description
-      keywords
-      author {
-        name
-      }
     }
   }
 `
