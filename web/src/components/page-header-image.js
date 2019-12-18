@@ -1,12 +1,9 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {jsx, Styled, Container} from 'theme-ui'
-import {Box, Flex} from '@theme-ui/components'
+import {jsx} from 'theme-ui'
 
 import {buildImageObj} from '../lib/helpers'
 import {imageUrlFor} from '../lib/image-url'
-import PortableText from './portableText'
-import PageSideNav from './generic-page-side-nav'
 
 function GenericPage ({_rawBody, title, section, headerImage = null}) {
   return (
@@ -19,7 +16,6 @@ function GenericPage ({_rawBody, title, section, headerImage = null}) {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover'
         }}>
-
           <picture
             sx={{
               width: '100%',
@@ -68,34 +64,34 @@ function GenericPage ({_rawBody, title, section, headerImage = null}) {
 
       {!headerImage &&
 
-      <div sx={{
-        paddingBottom: ['calc(12 / 16 * 100%)', 'calc(10 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(5 / 16 * 100%)'],
-        position: 'relative'
-      }}>
+        <div sx={{
+          paddingBottom: ['calc(12 / 16 * 100%)', 'calc(10 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(5 / 16 * 100%)'],
+          position: 'relative'
+        }}>
 
-        <picture
-          sx={{
-            width: '100%',
-            height: '100%'
-          }}>
-          <source media='(min-width: 1600px)' srcSet='https://via.placeholder.com/1920x600?text=missing+image' />
-          <source media='(min-width: 1280px)' srcSet='https://via.placeholder.com/1600x600?text=missing+image' />
-          <source media='(min-width: 640px)' srcSet='https://via.placeholder.com/769x288?text=missing+image' />
-          <img src='https://via.placeholder.com/400x300?text=missing+image'
-            alt='placeholder'
+          <picture
             sx={{
-              display: 'block',
-              position: 'absolute',
-              top: '0',
-              left: '0',
               width: '100%',
-              height: '100%',
-              verticalAlign: 'top',
-              objectFit: 'cover'
-            }}
-          />
-        </picture>
-      </div>
+              height: '100%'
+            }}>
+            <source media='(min-width: 1600px)' srcSet='https://via.placeholder.com/1920x600?text=missing+image' />
+            <source media='(min-width: 1280px)' srcSet='https://via.placeholder.com/1600x600?text=missing+image' />
+            <source media='(min-width: 640px)' srcSet='https://via.placeholder.com/769x288?text=missing+image' />
+            <img src='https://via.placeholder.com/400x300?text=missing+image'
+              alt='placeholder'
+              sx={{
+                display: 'block',
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                width: '100%',
+                height: '100%',
+                verticalAlign: 'top',
+                objectFit: 'cover'
+              }}
+            />
+          </picture>
+        </div>
 
       }
     </>
