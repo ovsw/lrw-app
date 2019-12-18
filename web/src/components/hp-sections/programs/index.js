@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
 import {Link} from 'gatsby'
-import {jsx, Styled} from 'theme-ui'
+import {jsx, Container, Styled} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 
 import {FaChevronRight} from 'react-icons/fa'
@@ -21,19 +21,85 @@ const Programs = () => {
       variant: 'sections.hpSection',
       background: `url(${SectionBg}) repeat center center`
     }}>
+      <Container sx={{
+        maxWidth: '7xl',
+        'h3': {
+          fontFamily: 'body', fontWeight: 'normal', letterSpacing: '-0.1rem', fontSize: 4
+        }
+      }}>
+        <Flex>
+
+          <div sx={{width: ['full', 'full', '1/2']}}>
+
+            <Styled.h2 as='h2' sx={{mb: 2, mt: 0}}>Trial Sessions</Styled.h2>
+            <Flex sx={{
+              flexWrap: 'wrap',
+              'div': {
+
+                pr: 4,
+                // width: ['full', 'full', '1/2', '1/5'],
+                'p': {
+                  ml: 1,
+                  borderLeft: '2px solid',
+                  borderColor: 'accent',
+                  pl: 3
+                }
+              }
+            }}>
+
+              <Box>
+                <Styled.h3>Rookie Camp:</Styled.h3>
+                <p> An opportunity for rookie or first time campers to fully immerse themselves in the excitement and wonder of the Laurelwood sleepaway experience.</p>
+              </Box>
+              <Box>
+                <Styled.h3>Taste of Laurelwood:</Styled.h3>
+                <p> Three wonderful days to introduce your camper to Laurelwood and the sleepaway camp experience. Drop off is Thursday at 10 am and pick up is Sunday at 1:00 pm.<br />
+                  <Link to='/programs/trial-sessions/' sx={{variant: 'buttons.3DAccent', mt: 4, display: 'inline-block'}}>More about Trial Sessions</Link></p>
+
+              </Box>
+
+            </Flex>
+          </div>
+          <div sx={{width: ['full', 'full', '1/2'], pl: 4}}>
+            <Styled.h2 as='h2' sx={{mb: 2, mt: 0}}>Specialty Camps</Styled.h2>
+            <Flex sx={{
+              flexWrap: 'wrap',
+              'div': {
+                // width: ['full', 'full', '1/2', '1/5'],
+                'p': {
+                  ml: 1,
+                  borderLeft: '2px solid',
+                  borderColor: 'accent',
+                  pl: 3
+                }
+              }
+            }}>
+
+              <Box>
+                <Styled.h3>Enhance your summer fun with Laurelwood Specialty Camps! </Styled.h3>
+                <p> Each program will combine immersive, professional instruction and skill development with our high-energy summer camp fun for an intense, well-rounded experience.<br /> <br /> Campers will master new skills, make new friends and gain a stronger sense of community with an emphasis on the values of teamwork, cooperation and sportsmanship. <Link to='/programs/specialty-camps/' sx={{variant: 'buttons.3DAccent', mt: 4, display: 'inline-block'}}>More about Specialty Camps</Link></p>
+
+              </Box>
+
+            </Flex>
+          </div>
+        </Flex>
+      </Container>
+
+      <Container sx={{maxWidth: '7xl'}}><Styled.h2 sx={{mt: '0'}}>Laurelwood Main Programs:</Styled.h2></Container>
+
       <SectionWithSidebar sidebar={<Sidebar />} mainContent={<MainContent />} />
-    </section>
+    </section >
   )
 }
 
 const Sidebar = () => {
   return (
     <>
-      <Styled.h1 as='h2'>Programs</Styled.h1>
       <p>Camp Laurelwood is proud to offer a variety of session options to meet the needs of each Laurelwood family.</p>
       <p><strong>What makes our Programs so special?</strong></p>
       <p>At Laurelwood we believe that our <strong>program structure</strong> is as important as the relationships the campers make.</p>
-      <p>To ensure our campers are receiving high quality programming, we have developed <strong>Camp Activity Plans (CAPs)</strong></p>
+      <p>To ensure our campers are receiving high quality programming, we have developed <strong>Camp Activity Plans (CAPs)</strong>, which:</p>
       <ul>
         <li>Provide Age-appropriate activities</li>
         <li>Provide campers the opportunity to learn or a grow a new skill</li>
@@ -50,14 +116,14 @@ const Sidebar = () => {
 }
 
 const programs = [
-  {
-    name: 'Trial Sessions',
-    age: '2nd-9th graders',
-    icon: 'sun',
-    layout: 'wide',
-    description: 'The perfect way for rookies and first time campers to fully immerse themselves in the excitement and wonder of the Laurelwood sleepaway experience.',
-    link: '/programs/pine-cone-camp/'
-  },
+  // {
+  //   name: 'Trial Sessions',
+  //   age: '2nd-9th graders',
+  //   icon: 'sun',
+  //   layout: 'wide',
+  //   description: 'The perfect way for rookies and first time campers to fully immerse themselves in the excitement and wonder of the Laurelwood sleepaway experience.',
+  //   link: '/programs/pine-cone-camp/'
+  // },
   {
     name: 'Overnight Camp',
     age: '2nd-9th graders',
@@ -76,24 +142,24 @@ const programs = [
     name: 'Bonim Travel',
     age: '10th graders',
     icon: 'teenagers',
-    description: 'The 2020 Bonim Teen & Travel Program is a recreational, educational and cultural experience for 10th graders, building character and social skills along with a strong Jewish identity.',
+    description: 'A recreational, educational and cultural experience for 10th graders, building character and social skills along with a strong Jewish identity.',
     link: '/programs/teen-camp/'
   },
   {
     name: 'SIT Program',
     age: '11th graders',
     icon: 'leader',
-    description: 'Laurelwood\'s SIT program provides rising 11th graders the tools and experience they need to become future leaders, strong role models as well as Camp Laurelwood staff.',
-    link: '/programs/leader-in-training/'
-  },
-  {
-    name: 'Specialty Programs',
-    age: '11th graders',
-    icon: 'leader',
-    layout: 'wide',
-    description: 'How could we make a Camp Laurelwood summer even better? Check out our week-long intensive specialty camp offerings!',
+    description: 'Provides rising 11th graders the tools and experience they need to become future leaders, strong role models  Camp Laurelwood staff.',
     link: '/programs/leader-in-training/'
   }
+  // {
+  //   name: 'Specialty Programs',
+  //   age: '11th graders',
+  //   icon: 'leader',
+  //   layout: 'wide',
+  //   description: 'How could we make a Camp Laurelwood summer even better? Check out our week-long intensive specialty camp offerings!',
+  //   link: '/programs/leader-in-training/'
+  // }
 ]
 
 const MainContent = () => {

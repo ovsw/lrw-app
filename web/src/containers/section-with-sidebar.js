@@ -5,7 +5,7 @@ import {Box, Flex} from '@theme-ui/components'
 
 const SectionWithLeftSidebar = ({sidebar = <p>no sidebar</p>, mainContent = <p>no content</p>, leftSidebar = false}) => {
   return (
-    <Container sx={{maxWidth: '6xl'}}>
+    <Container sx={{maxWidth: '7xl'}}>
       <Flex
         sx={{
           flexWrap: 'wrap',

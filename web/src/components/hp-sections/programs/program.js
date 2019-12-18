@@ -20,26 +20,26 @@ const ProgramItem = ({name, icon = 'pineCone', iconSize = '3rem', description, l
     }}>
 
       {(layout === 'normal') &&
-      <div sx={{
-        fontSize: iconSize,
-        color: 'primary',
-        borderRadius: '1000px'
-      }}>
-        <div className='iconBg' sx={{
-          borderRadius: '1000px',
-          width: '6rem',
-          height: '6rem',
-          bg: 'background',
-          border: '1px dashed red',
-          borderColor: 'white',
-          p: '1.5rem',
-          color: 'primaryDark',
-          mx: 'auto',
-          transition: 'all 0.1s ease-out'
+        <div sx={{
+          fontSize: iconSize,
+          color: 'primary',
+          borderRadius: '1000px'
         }}>
-          <Icon symbol={icon} />
-        </div>
-      </div>}
+          <div className='iconBg' sx={{
+            borderRadius: '1000px',
+            width: '6rem',
+            height: '6rem',
+            bg: 'background',
+            border: '1px dashed red',
+            borderColor: 'white',
+            p: '1.5rem',
+            color: 'primaryDark',
+            mx: 'auto',
+            transition: 'all 0.1s ease-out'
+          }}>
+            <Icon symbol={icon} />
+          </div>
+        </div>}
 
       <Styled.h3 sx={{mt: marginTop, mb: marginBottom, color: 'accent', fontWeight: 'bold', lineHeight: 'none'}}>{name}</Styled.h3>
       <p sx={{fontSize: 1, lineHeight: '1.5', mt: marginTop, mb: marginBottom, ml: marginBetween, textAlign: textAlign}}>{description}</p>

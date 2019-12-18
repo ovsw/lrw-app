@@ -15,52 +15,6 @@ const TransportationSection = () => {
   return (
     <section sx={{variant: 'sections.hpSectionLight'}}>
       <SectionWithSidebar mainContent={<MainContent />} sidebar={<Sidebar />} />
-      {/* <Container sx={{maxWidth: '6xl'}}>
-        <Styled.h1 as='h3' sx={{fontWeight: 'normal', mb: 4}}>Transporation Areas</Styled.h1>
-        <Flex sx={{
-          flexWrap: 'wrap',
-          'div': {
-
-            pr: 4,
-            width: ['full', 'full', '1/2', '1/5'],
-            'p': {
-              ml: 1,
-              borderLeft: '2px solid',
-              borderColor: 'accent',
-              pl: 3
-            },
-            'h4': {
-              fontWeight: 'normal'
-            }
-          }
-        }}>
-
-          <Box>
-            <Styled.h4>Mercer County:</Styled.h4>
-            <p>Ewing, Hamilton, Hopewell, Lawrenceville, Pennington, Princeton, Robbinsville, Titusville</p>
-          </Box>
-
-          <Box>
-            <Styled.h4>Somerset County:</Styled.h4>
-            <p> Belle Mead, Hillsborough, Neshanic, Rocky Hill, Skillman</p>
-          </Box>
-
-          <Box>
-            <Styled.h4>Hunterdon County: </Styled.h4>
-            <p> East Amwell, Flemington, Lambertville, Sergeantville, Stockton, West Amwell</p>
-          </Box>
-
-          <Box>
-            <Styled.h4>Bucks County: </Styled.h4>
-            <p> New Hope, Newtown, Washington Crossing,Yardley</p>
-          </Box>
-
-          <Box>
-            <Styled.h4>Middlesex County:</Styled.h4>
-            <p>Kendall Park, Plainsboro, South Brunswick</p>
-          </Box>
-        </Flex>
-      </Container> */}
     </section>
   )
 }
