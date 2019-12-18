@@ -5,7 +5,7 @@ const {isFuture} = require('date-fns')
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const {format} = require('date-fns')
+// const {format} = require('date-fns')
 
 async function createGenericPages (graphql, actions, reporter) {
   const {createPage} = actions
@@ -72,7 +72,7 @@ async function createBlogPostPages (graphql, actions, reporter) {
   postEdges
     .filter(edge => !isFuture(edge.node.publishedAt))
     .forEach((edge, index) => {
-      const {id, slug = {}, publishedAt} = edge.node
+      const {id, slug = {}} = edge.node // publishedAt
       // const dateSegment = format(publishedAt, 'YYYY/MM')
       const path = `/news/${slug.current}/`
 
