@@ -12,7 +12,8 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
 import Hero from '../components/hp-sections/hero'
-import Transportation from '../components/hp-sections/transportation'
+// import Transportation from '../components/hp-sections/transportation'
+import About from '../components/hp-sections/section-three-columns'
 import Lunch from '../components/hp-sections/lunch'
 import Programs from '../components/hp-sections/programs'
 import LocationGmap from '../components/hp-sections/location-gmap'
@@ -50,7 +51,7 @@ const IndexPage = props => {
         keywords={site.keywords}
       />
       <Hero />
-      <Transportation />
+      <About />
       <Programs />
       <Lunch />
       <LocationGmap />

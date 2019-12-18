@@ -249,7 +249,7 @@ export default {
       fontSize: '2'
     },
     'a': {
-      'color': 'primary',
+      'color': 'accent',
       'fontWeight': 'bold',
       ':hover': {
         'textDecoration': 'underline',

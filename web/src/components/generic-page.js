@@ -3,8 +3,8 @@ import React from 'react' // eslint-disable-line
 import {jsx, Styled, Container} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 
-import {buildImageObj} from '../lib/helpers'
-import {imageUrlFor} from '../lib/image-url'
+// import {buildImageObj} from '../lib/helpers'
+// import {imageUrlFor} from '../lib/image-url'
 import PortableText from './portableText'
 import PageSideNav from './generic-page-side-nav'
 import PageHeaderImage from './page-header-image'
@@ -12,11 +12,11 @@ import PageHeaderImage from './page-header-image'
 function GenericPage ({_rawBody, title, section, headerImage = null}) {
   return (
     <div sx={{marginTop: '7rem'}}>
-      <PageHeaderImage headerImage={headerImage}/>
+
+      <PageHeaderImage headerImage={headerImage} />
 
       <section sx={{variant: 'sections.hpSectionLight'}}>
-        <Container sx={{maxWidth: '6xl', p: 4, py: [4, 5]}}s>
-          {/* <Styled.root> */}
+        <Container sx={{maxWidth: '6xl', p: 4, py: [4, 5]}} s>
           <Flex sx={{flexWrap: 'wrap', flexDirection: 'row-reverse'}}>
             <Box sx={{width: ['full', 'full', '3/4'], pl: [0, 0, 4]}}>
               <div sx={{display: ['block', 'block', 'none'], mb: 4}}>
@@ -38,7 +38,6 @@ function GenericPage ({_rawBody, title, section, headerImage = null}) {
               </aside>
             </Box>
           </Flex>
-          {/* </Styled.root> */}
         </Container>
       </section>
     </div>

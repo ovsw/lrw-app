@@ -7,6 +7,7 @@ import Teenagers from './teenagers'
 import Leader from './leader'
 import Sun from './sun'
 import Moon from './moon'
+import StarOfDavid from './star-of-david'
 
 function Icon (props) {
   switch (props.symbol) {
@@ -26,6 +27,8 @@ function Icon (props) {
       return <Sun />
     case 'moon':
       return <Moon />
+    case 'starOfDavid':
+      return <StarOfDavid />
     default:
       return <span>Unknown icon: {props.symbol}</span>
   }
