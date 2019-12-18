@@ -51,8 +51,8 @@ const ArchivePage = props => {
   return (
     <>
       <SEO title='News' />
-      <Container>
-        <Styled.h1>News</Styled.h1>
+      <Container sx={{pt: ['10rem'], pb: 5}}>
+        <Styled.h1 sx={{mb: 4}}>News</Styled.h1>
         {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} />}
       </Container>
     </>

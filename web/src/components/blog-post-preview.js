@@ -1,18 +1,19 @@
+/** @jsx jsx */
+import React from 'react' // eslint-disable-line
+import {jsx, Styled} from 'theme-ui'
 import {format} from 'date-fns'
 import {Link} from 'gatsby'
-import React from 'react'
 import {buildImageObj, cn, getBlogUrl} from '../lib/helpers'
 import {imageUrlFor} from '../lib/image-url'
 import PortableText from './portableText'
 
 import styles from './blog-post-preview.module.css'
-import {responsiveTitle3} from './typography.module.css'
 
 function BlogPostPreview (props) {
   return (
     <Link
-      className={props.isInList ? styles.inList : styles.inGrid}
-      to={getBlogUrl(props.publishedAt, props.slug.current)}
+      className={styles.inList}
+      to={`/news/${props.slug.current}/`}
     >
       <div className={styles.leadMediaThumb}>
         {props.mainImage && props.mainImage.asset && (
@@ -23,14 +24,22 @@ function BlogPostPreview (props) {
               .auto('format')
               .url()}
             alt={props.mainImage.alt}
+          // sx={{
+          //   position: 'absolute',
+          //   top: '0',
+          //   left: '0',
+          //   width: '100%',
+          //   height: '100%',
+          //   objectFit: 'cover'
+          // }}
           />
         )}
       </div>
       <div className={styles.text}>
-        <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
+        <Styled.h3>{props.title}</Styled.h3>
         {props._rawExcerpt && (
           <div className={styles.excerpt}>
-            <PortableText blocks={props._rawExcerpt} />
+            <PortableText blocks={props._rawExcerpt} sx={{fontFamily: 'body'}} />
           </div>
         )}
         <div className={styles.date}>{format(props.publishedAt, 'MMMM Do, YYYY')}</div>

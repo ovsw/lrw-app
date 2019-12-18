@@ -275,7 +275,8 @@ export default {
     },
     'p': {
       fontSize: 2,
-      lineHeight: 'body'
+      lineHeight: 'body',
+      color: 'text'
     },
     'h1': {
       ...sharedHeadingStyles,
@@ -471,7 +472,7 @@ export default {
       }
     },
     'navToggle': {
-      'display': [ 'inline', 'inline', 'none' ],
+      'display': ['inline', 'inline', 'none'],
       'color': 'white',
       'bg': 'transparent',
       'outline': 'none',
@@ -684,7 +685,7 @@ export default {
       }
     },
     'sidebarNav': {
-      color: 'dark',
+      color: 'text',
       textDecoration: 'none',
       // textTransform: 'uppercase',
       fontSize: '1',
