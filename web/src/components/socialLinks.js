@@ -15,7 +15,11 @@ const SocialLinks = () => {
       },
       a: {
         display: 'inline-block',
-        fontSize: 5
+        fontSize: 5,
+        '& svg': {
+          bg: 'white',
+          borderRadius: '5px'
+        }
       }
     }}>
       <li><a href='https://facebook.com' sx={{color: '#3b5998'}} rel='noopener noreferrer'><FaFacebookSquare /></a></li>
