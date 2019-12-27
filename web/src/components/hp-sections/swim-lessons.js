@@ -18,25 +18,25 @@ const FoodSection = () => {
 }
 
 const MainContent = () => {
-  // const {foodImage} = useStaticQuery(
-  //   graphql`
-  //   query {
-  //     foodImage: file(relativePath: { eq: "lunch-time-illustration.png" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 726) {
-  //           ...GatsbyImageSharpFluid_tracedSVG
-  //         }
-  //       }
-  //     }
-  //   }
-  //   `
-  // )
+  const {swimImage} = useStaticQuery(
+    graphql`
+    query {
+      swimImage: file(relativePath: { eq: "swim-lessons.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 726) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+    `
+  )
   return (
     <div sx={{
-      // mx: [0, 5, 4, 5, 6]
+      mr: [0, 4]
     }}>
-      {/* <Img fluid={foodImage.childImageSharp.fluid} /> */}
-      <img src='https://via.placeholder.com/726x600' sx={{pr: 4}} />
+      <Img fluid={swimImage.childImageSharp.fluid} />
+      {/* <img src='https://via.placeholder.com/726x600' sx={{pr: 4}} /> */}
     </div>
   )
 }

@@ -97,7 +97,8 @@ const TestimonialsSection = () => {
     appendDots: dots => (
       <div>
         <ul style={{
-          position: 'relative', top: '50px', padding: '0'}}> {dots} </ul>
+          position: 'relative', top: '50px', padding: '0'
+        }}> {dots} </ul>
       </div>
     ),
     customPaging: i => (
@@ -131,7 +132,7 @@ const TestimonialsSection = () => {
       position: 'relative',
       zIndex: '2'
     }}>
-      <Styled.h1 as='h2' sx={{textAlign: 'center', color: 'accent'}}>What Parents Say</Styled.h1>
+      <Styled.h1 as='h2' sx={{textAlign: 'center', color: 'accent'}}>What Campers Say</Styled.h1>
       <Container sx={{maxWidth: '6xl', px: ['2.8rem', 5, 0]}}>
         <Slider {...settings}>
           {testimonialsContentTemp.map(testimonial => <TestimonialItem {...testimonial} key={testimonial.name} />)}
@@ -143,32 +144,36 @@ const TestimonialsSection = () => {
 
 const testimonialsContentTemp = [
   {
-    name: 'Beth F. Milles',
-    text: 'Camp Laurelwood has been a source of great joy and wonderful memories for my family - happiness abounds at camp.'
-  },
-  {
-    name: 'Laura Stuken',
-    text: 'They always provide incredible warmth to the children and their parents. If you are looking for a camp that isn’t large where your child will get lost in, an extremely inclusive group of children and counselors, with both sports and arts, this is the best camp.'
-  },
-  {
     name: 'Emily Cooper',
-    text: 'Truly a magical place that fills me with more happiness than anywhere else in the world, and I wouldn\'t be the person I am today with out camp and the people who help make it home'
+    text: 'Truly a magical place that fills me with more happiness than anywhere else in the world!'
   },
   {
-    name: 'Jenna Turner',
-    text: 'This camp is the best. The Camp has such a warm close knit feel. The staff is amazing the activities are great. Your camper is surely not just a number here.'
+    name: 'Henry Brown',
+    text: 'After 9 summers at laurelwood I can say with confidence that it gets better every year. It\'s always such a wonderful mix of new and old faces and bonds that form and grow each summer. Laurelwood has shaped me into who I am today and I\'m forever grateful for the experiences and environment it provided me growing up.'
   },
   {
-    name: 'Marci L. Marcus',
-    text: 'This camp is the best. The Camp has such a warm close knit feel. The staff is amazing the activities are great. Your camper is surely not just a number here.'
+    name: 'Isabel Braverman',
+    text: 'Not a day goes by when I don’t think of camp; I am reminded of my home away from home when I hear “Unwritten” on the radio, whenever I wear a white blouse, and whenever I eat a blondie. It is the small traditions that make camp unique. Laurelwood has provided a safe haven for me to pursue my passions with the most supportive staff and campers, and I consider myself incredibly lucky to have not only a summer family, but a forever family, in the 06443.'
   },
   {
-    name: 'Marci L. Marcus',
-    text: 'This camp is the best. The Camp has such a warm close knit feel. The staff is amazing the activities are great. Your camper is surely not just a number here.'
+    name: 'Breezie Miller',
+    text: 'Camp Laurelwood has been my home away from home for 13 years, truly as long as I can remember. It has given me my best friends, my happiest memories, and shaped me into the person I am today. Being Junior Girls’ Division Head is an amazing experience unlike anything else, and I feel so lucky to have had the opportunity to connect with so many incredible campers and staff this summer.'
   },
   {
-    name: 'Marci L. Marcus',
-    text: 'This camp is the best. The Camp has such a warm close knit feel. The staff is amazing the activities are great. Your camper is surely not just a number here.'
+    name: 'Hilary Rappaport ',
+    text: 'Camp Laurelwood was life changing for me this past summer because I was able to watch my campers grow. I was also able to watch them find their love for camp the way I did when I was their age which is always heartwarming.'
+  },
+  {
+    name: 'Aaron Cohen',
+    text: 'For almost ten years now, Laurelwood has been my summer home and I don’t doubt for a second it’ll be my summer home for many years to come. Camp is where my strongest friendships were born and where I have grown to be an independent and outgoing leader. I can’t imagine spending my summers anywhere else. Live, love, camp.'
+  },
+  {
+    name: 'Jess Tyler',
+    text: 'Camp Laurelwood. A place where experiences become memories and friends become family. A place where bunks hold the most important secrets and matching bracelets mean everything. A place where you sing your heart out, where you dance like nobody is watching, where you share stories round campfires and laugh until you cry. Camp is a home away from home. Laurelwood is family.'
+  },
+  {
+    name: 'Erin Bellucci',
+    text: 'When I’m at camp I’m so busy making friends, doing activities, singing on benches at shabbat, roasting marshmallows, and being a part of the countless other special things we do. When the 7 weeks are over and I have my first moment to reflect on the summer, I realize that all throughout each of those special days I was actually growing as a person and becoming a more genuine, thoughtful version of myself.'
   }
 ]
 
