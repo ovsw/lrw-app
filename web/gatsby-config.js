@@ -81,7 +81,7 @@ module.exports = {
             title: 'column 2',
             children: [
               {
-                title: 'Food, Helth and Safety',
+                title: 'Food, Health and Safety',
                 slug: '/food-health-and-safety/',
                 children: []
               },
