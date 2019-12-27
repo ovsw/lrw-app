@@ -4,7 +4,7 @@ import {jsx, Container, Styled} from 'theme-ui'
 import {Link} from 'gatsby'
 import {Box, Flex} from '@theme-ui/components'
 
-import Column from './section-three-columns-column'
+import Column from './about-section-column'
 
 const SectionThreeColumns = () => {
   return (
@@ -16,7 +16,7 @@ const SectionThreeColumns = () => {
         </div>
         <Flex sx={{mt: 5}}>
           {columnsContent.map(column => (
-            <Box key={column.title} sx={{width: '1/3', px: 3, display: 'flex'}}><Column {...column} /></Box>
+            <Box key={column.title} sx={{width: '1/2', px: 3, display: 'flex'}}><Column {...column} /></Box>
           ))}
         </Flex>
       </Container>
@@ -28,18 +28,18 @@ const columnsContent = [
   {
     title: 'Our Mission',
     icon: 'teenagers',
-    text: 'Create a fun, safe and inclusive environment that builds self-esteem and encourages personal growth for children ages 5-15.'
+    text: 'To provide a fun, safe and inclusive environment that builds self-esteem and encourages personal growth for children ages 5-15. Our programs explore and enhance Jewish identity and values, encourage healthy lifestyle choices, and lay the foundation for positive, lifelong friendships.'
   },
   {
     title: 'Our Vision',
     icon: 'starOfDavid',
-    text: 'Promoting, exploring and enhancing the Jewish identity and values in a fun, safe and inclusive enviroment.'
-  },
-  {
-    title: 'Our Approach',
-    icon: 'leader',
-    text: 'Inspire campers and staff to learn, grow and explore, creating lasting memories that strengthen the community.'
+    text: 'Camp Laurelwood is a vibrant, nurturing community rooted in Jewish values and traditions that inspire campers and staff to learn, grow and explore, creating lasting memories that strengthen the community.'
   }
+  // {
+  //   title: 'Our Approach',
+  //   icon: 'leader',
+  //   text: 'Inspire campers and staff to learn, grow and explore, creating lasting memories that strengthen the community.'
+  // }
 ]
 
 export default SectionThreeColumns
