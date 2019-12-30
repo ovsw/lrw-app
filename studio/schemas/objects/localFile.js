@@ -15,7 +15,8 @@ export default {
       title: 'Description',
       options: {
         isHighlighted: true
-      }
+      },
+      validation: Rule => Rule.error('You have to fill out the description of the file.').required()
     }
   ],
   preview: {
