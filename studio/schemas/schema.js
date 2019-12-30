@@ -16,6 +16,7 @@ import bodyPortableText from './objects/bodyPortableText'
 import bioPortableText from './objects/bioPortableText'
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
+import localFile from './objects/localFile'
 import authorReference from './objects/authorReference'
 import youtube from './objects/youtube'
 import mytable from './objects/myTable'
@@ -36,6 +37,7 @@ export default createSchema({
     category,
     author,
     mainImage,
+    localFile,
     authorReference,
     bodyPortableText,
     bioPortableText,

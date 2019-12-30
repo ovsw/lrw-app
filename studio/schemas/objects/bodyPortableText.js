@@ -88,6 +88,9 @@ export default {
       options: {hotspot: true}
     },
     {
+      type: 'localFile'
+    },
+    {
       type: 'youtube'
     },
     {
