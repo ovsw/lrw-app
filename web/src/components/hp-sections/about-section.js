@@ -12,7 +12,7 @@ const SectionThreeColumns = () => {
       <Container sx={{px: 0}}>
         <Styled.h1 as='h2' sx={{textAlign: 'center'}}>Connecticut's Premier Jewish Summer Camp.</Styled.h1>
         <div sx={{variant: 'styles', mt: 5, px: 2, textAlign: 'center', maxWidth: '3xl', mx: 'auto'}}>
-          <p>We offer both Overnight and Day Camp <Link to='/programs/'>programs</Link>, lots of fun <Link to='/activities/'>activites</Link> and a warm welcoming community. </p>
+          <p>We offer both Overnight and Day Camp <Link to='/programs/'>programs</Link>, lots of fun <Link to='/activities/'>activities</Link> and a warm welcoming community. </p>
         </div>
         <Flex sx={{mt: 5}}>
           {columnsContent.map(column => (
