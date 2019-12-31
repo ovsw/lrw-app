@@ -144,27 +144,21 @@ module.exports = {
               {
                 title: 'Meet our Staff',
                 slug: '/our-staff/',
-                children: [
-                  {
-                    title: 'Letter From the Director',
-                    slug: 'welcome-letter-from-the-director',
-                    children: []
-                  },
-                  {
-                    title: 'Board of Directors',
-                    slug: 'board-of-directors',
-                    children: []
-                  }
-                ]
+                children: []
+              },
+              {
+                title: 'Letter From the Director',
+                slug: 'welcome-letter-from-the-director',
+                children: []
+              },
+              {
+                title: 'Board of Directors',
+                slug: 'board-of-directors',
+                children: []
               },
               {
                 title: 'ACA Accreditation',
                 slug: '/aca-accreditation/',
-                children: []
-              },
-              {
-                title: 'Camp Newsletter',
-                slug: '/camp-newsletter/',
                 children: []
               }
             ]
@@ -191,8 +185,12 @@ module.exports = {
                 title: 'Alumni Events',
                 slug: '/alumni-events/',
                 children: []
+              },
+              {
+                title: 'Camp Newsletter',
+                slug: '/camp-newsletter/',
+                children: []
               }
-
             ]
           }
         ]
