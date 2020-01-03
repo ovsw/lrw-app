@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, {useState} from 'react' // eslint-disable-line
+import React, { useState } from 'react' // eslint-disable-line
 import {Container, jsx, Styled} from 'theme-ui'
 import {Box} from '@theme-ui/components'
 import HeroVideoBg from './hero-video-bg'
@@ -7,7 +7,7 @@ import ModalVideo from 'react-modal-video'
 
 import {FaPlay} from 'react-icons/fa'
 
-import VideoPoster from '../../images/rambling-pines-camp-intro-video.jpg'
+import VideoPoster from '../../images/hero-video-bg.jpg'
 import BigLogo from '../../images/lrw-temp-simplified-logo-vector-bw.png'
 
 import '../../../node_modules/react-modal-video/css/modal-video.min.css'
@@ -46,7 +46,7 @@ const Hero = () => {
         left: 0,
         zIndex: 0
       }}>
-        <HeroVideoBg playFullVideo={playFullVideo} poster='https://rbpvideo-ac97.kxcdn.com/rambling-pines-camp-intro-video.jpg' />
+        <HeroVideoBg playFullVideo={playFullVideo} poster={VideoPoster} />
       </div>
       <Container className='container' sx={{
         maxWidth: '5xl',
@@ -74,7 +74,7 @@ const Hero = () => {
           maxWidth: '2xl',
           mx: 'auto'
         }}>
-        Wonderful experiences await your child at Camp Laurelwood, Connecticut's Premier Jewish Co-ed Overnight Camp. </p>
+          Wonderful experiences await your child at Camp Laurelwood, Connecticut's Premier Jewish Co-ed Overnight Camp. </p>
         <button onClick={() => setPlayFullVideo(true)} sx={{
           variant: 'buttons.3DAccent',
           display: 'inline-block',
