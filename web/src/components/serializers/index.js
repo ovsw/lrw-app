@@ -44,7 +44,19 @@ const serializers = {
     iframeEmbed: Embed
   },
   marks: {
-    button
+    button,
+    link: ({mark, children}) => {
+      // Read https://css-tricks.com/use-target_blank/
+      const {blank, href} = mark
+      const isExternal = isAbsoluteURL(href)
+      if (isExternal) {
+        return blank
+          ? <a href={href} className='externalLink' rel='noopener noreferrer' target='_blank'>{children}</a>
+          : <a href={href}>{children}</a>
+      } else {
+        return <Link to={href}>{children}</Link>
+      }
+    }
   }
 }
 
