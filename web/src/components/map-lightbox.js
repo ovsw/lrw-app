@@ -90,7 +90,7 @@ const LightBox = ({content: {title, _rawDescription, images}, closeLightBox}) =>
           }}>
             {_rawDescription && <PortableText blocks={_rawDescription} />}
           </div>
-          <div sx={{display: 'flex', flexWrap: 'wrap', mt: 3}}>
+          <div sx={{display: 'flex', flexWrap: 'wrap', mt: 4}}>
             {images.map((image, index) => (
               <a
                 url={image.url}
