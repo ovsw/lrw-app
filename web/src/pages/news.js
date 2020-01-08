@@ -1,14 +1,13 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
 import {jsx, Styled, Container} from 'theme-ui'
-import {Box, Flex} from '@theme-ui/components'
+// import {Box, Flex} from '@theme-ui/components'
 
 import {graphql} from 'gatsby'
 import {mapEdgesToNodes} from '../lib/helpers'
 import BlogPostPreviewList from '../components/blog-post-preview-list'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
-import Layout from '../containers/layout'
 
 export const query = graphql`
   query ArchivePageQuery {

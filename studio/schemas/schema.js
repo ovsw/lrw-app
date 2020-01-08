@@ -10,12 +10,14 @@ import category from './documents/category'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 import page from './documents/page'
+import mapMarker from './documents/mapMarker'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
 import bioPortableText from './objects/bioPortableText'
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
+import slideshowImage from './objects/slideshowImage'
 import localFile from './objects/localFile'
 import authorReference from './objects/authorReference'
 import youtube from './objects/youtube'
@@ -34,9 +36,11 @@ export default createSchema({
     siteSettings,
     post,
     page,
+    mapMarker,
     category,
     author,
     mainImage,
+    slideshowImage,
     localFile,
     authorReference,
     bodyPortableText,

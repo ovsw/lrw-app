@@ -1,3 +1,6 @@
+*-test.*
+*-orig.*
+
 # Logs
 logs
 *.log
