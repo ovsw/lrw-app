@@ -293,6 +293,12 @@ module.exports = {
         path: path.join(__dirname, 'src', 'images')
       }
     },
+    {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: false // (default: true) Enable/disable loading stylesheets via CDN
+      }
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-theme-ui',

@@ -80,62 +80,66 @@ const MapPage = ({locations}) => {
 
   const inBrowser = (typeof window !== 'undefined')
 
-  return (
+  if (typeof window !== 'undefined') {
+    return (
 
-    <>
-      {currLightboxItem && <MapLightBox content={currLightboxItem} closeLightBox={closeLightBox} />}
+      <>
+        {currLightboxItem && <MapLightBox content={currLightboxItem} closeLightBox={closeLightBox} />}
 
-      {inBrowser && (
-        <Map
-          className='map'
-          crs={L.CRS.Simple}
-          bounds={[
-            [0, 0],
-            [1209, 1920]
-          ]}
-          minZoom={-0.5}
-          maxZoom={0.5}
-          zoomSnap={0.1}
-          // center={[20, 960]}
-          style={{height: `${(height - 116).toString()}px`, marginTop: '116px'}}
-        >
-          <ImageOverlay
-            url={mapimage}
+        {inBrowser && (
+          <Map
+            className='map'
+            crs={L.CRS.Simple}
             bounds={[
               [0, 0],
               [1209, 1920]
             ]}
-          />
-          {/* <Polygon
+            minZoom={-0.5}
+            maxZoom={0.5}
+            zoomSnap={0.1}
+            // center={[20, 960]}
+            style={{height: `${(height - 116).toString()}px`, marginTop: '116px'}}
+          >
+            <ImageOverlay
+              url={mapimage}
+              bounds={[
+                [0, 0],
+                [1209, 1920]
+              ]}
+            />
+            {/* <Polygon
             positions={[[300, 900], [300, 600], [600, 600], [600, 900]]}
             color="blue"
             onClick={this.MarkerClick}
           /> */}
-          {locations.edges.map(({node}, index) => {
-            const latLong = [node.y, node.x]
-            const currOffset = calcLabelOffset(node.labelDirection)
-            // console.log(node.labelDirection)
+            {locations.edges.map(({node}, index) => {
+              const latLong = [node.y, node.x]
+              const currOffset = calcLabelOffset(node.labelDirection)
+              // console.log(node.labelDirection)
 
-            return (
-              <>
-                {(latLong !== null) && (
-                  <Marker
-                    key={latLong}
-                    position={latLong}
-                    onClick={() => markerClick(index)}
-                  >
-                    <Tooltip permanent interactive direction={node.labelDirection} offset={currOffset}>
-                      {node.title}
-                    </Tooltip>
-                  </Marker>
-                )}
-              </>
-            )
-          })}
-        </Map>
-      )}
-    </>
-  )
+              return (
+                <>
+                  {(latLong !== null) && (
+                    <Marker
+                      key={latLong}
+                      position={latLong}
+                      onClick={() => markerClick(index)}
+                    >
+                      <Tooltip permanent interactive direction={node.labelDirection} offset={currOffset}>
+                        {node.title}
+                      </Tooltip>
+                    </Marker>
+                  )}
+                </>
+              )
+            })}
+          </Map>
+        )}
+      </>
+    )
+  } else {
+    return null
+  }
 }
 
 export default MapPage
