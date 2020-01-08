@@ -62,7 +62,8 @@ export default {
       name: 'images',
       title: 'Images',
       type: 'array',
-      of: [{type: 'slideshowImage'}]
+      of: [{type: 'slideshowImage'}],
+      validation: Rule => Rule.error('Must add at least one image.').required()
     }
   ],
   orderings: [
