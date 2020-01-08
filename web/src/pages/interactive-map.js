@@ -12,7 +12,7 @@ export const query = graphql`
       edges {
         node {
           title
-          description
+          _rawDescription
           labelDirection
           x
           y

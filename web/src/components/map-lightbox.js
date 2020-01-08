@@ -4,11 +4,14 @@ import React, { useState } from 'react' // eslint-disable-line
 import {jsx, Styled} from 'theme-ui'
 // import {Box, Flex} from '@theme-ui/components'
 import Img from 'gatsby-image'
+
+import PortableText from './portableText'
+
 import {FaTimesCircle} from 'react-icons/fa'
 
 import LoaderImage from '../images/loader.gif'
 
-const LightBox = ({content: {title, description, images}, closeLightBox}) => {
+const LightBox = ({content: {title, _rawDescription, images}, closeLightBox}) => {
   const [activeImage, setActiveImage] = useState(0)
 
   const getCurrImage = (e, index) => {
@@ -68,13 +71,25 @@ const LightBox = ({content: {title, description, images}, closeLightBox}) => {
         }}>
           <FaTimesCircle />
         </div>
-        <div sx={{width: ['auto', 'auto', '1/2'], p: 4, fontSize: 'small'}}>
+        <div sx={{
+          width: ['auto', 'auto', '1/2'],
+          p: 4,
+          fontSize: 'small'
+        }}>
           <Styled.h3 as='h2' sx={{mt: '0'}}>{title}</Styled.h3>
-          <p sx={{display: ['none', 'none', 'block']}}
-          // dangerouslySetInnerHTML={{
-          //   __html: description
-          // }}
-          >{description}</p>
+
+          <div sx={{
+            // variant: 'styles',
+            display: ['none', 'none', 'block'],
+            fontSize: '1rem',
+            p: {
+            },
+            'ul': {
+
+            }
+          }}>
+            {_rawDescription && <PortableText blocks={_rawDescription} />}
+          </div>
           <div sx={{display: 'flex', flexWrap: 'wrap', mt: 3}}>
             {images.map((image, index) => (
               <a

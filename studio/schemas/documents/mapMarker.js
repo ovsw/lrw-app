@@ -55,7 +55,7 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'text',
+      type: 'bioPortableText',
       validation: Rule => Rule.error('Missing description.').required()
     },
     {
