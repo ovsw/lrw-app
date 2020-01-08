@@ -91,7 +91,7 @@ const MapPage = ({locations}) => {
           crs={L.CRS.Simple}
           bounds={[
             [0, 0],
-            [1260, 1920]
+            [1209, 1920]
           ]}
           minZoom={-0.5}
           maxZoom={0.5}
@@ -103,7 +103,7 @@ const MapPage = ({locations}) => {
             url={mapimage}
             bounds={[
               [0, 0],
-              [1260, 1920]
+              [1209, 1920]
             ]}
           />
           {/* <Polygon
@@ -117,15 +117,19 @@ const MapPage = ({locations}) => {
             // console.log(node.labelDirection)
 
             return (
-              <Marker
-                key={latLong}
-                position={latLong}
-                onClick={() => markerClick(index)}
-              >
-                <Tooltip permanent interactive direction={node.labelDirection} offset={currOffset}>
-                  {node.title}
-                </Tooltip>
-              </Marker>
+              <>
+                {(latLong !== null) && (
+                  <Marker
+                    key={latLong}
+                    position={latLong}
+                    onClick={() => markerClick(index)}
+                  >
+                    <Tooltip permanent interactive direction={node.labelDirection} offset={currOffset}>
+                      {node.title}
+                    </Tooltip>
+                  </Marker>
+                )}
+              </>
             )
           })}
         </Map>
