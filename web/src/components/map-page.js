@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import React from 'react' // eslint-disable-line
-import { jsx, Styled, Container } from 'theme-ui'
-import { Box, Flex } from '@theme-ui/components'
+import React, { useState, useEffect } from 'react' // eslint-disable-line
+import {jsx} from 'theme-ui'
+// import {Box, Flex} from '@theme-ui/components'
 
-import { Map, Marker, ImageOverlay, Tooltip } from 'react-leaflet'
+import {Map, Marker, ImageOverlay, Tooltip} from 'react-leaflet'
 import L from 'leaflet'
 
 import mapimage from '../images/laurelwood-map-design-2.jpg'
@@ -11,7 +11,7 @@ import emptyIcon from '../images/px.png'
 
 import 'leaflet/dist/leaflet.css'
 
-import MapLightBox from './map-lightBox'
+import MapLightBox from './map-lightbox'
 
 if (typeof window !== 'undefined') {
   delete L.Icon.Default.prototype._getIconUrl
@@ -23,46 +23,30 @@ if (typeof window !== 'undefined') {
   })
 }
 
-export default class MapPage extends React.Component {
-  constructor(props) {
-    super(props)
+const MapPage = ({locations}) => {
+  const [height, setHeight] = useState(0)
+  const [currLightboxItem, setCurrLightboxItem] = useState(null)
 
-    this.state = {
-      height: 0,
-      currLightboxItem: null,
+  const markerClick = index => {
+    const {edges} = locations
+    setCurrLightboxItem(edges[index].node)
+  }
+
+  const updateWindowDimensions = () => {
+    setHeight(window.innerHeight)
+  }
+  const closeLightBox = () => {
+    setCurrLightboxItem(null)
+  }
+
+  const escFunction = event => {
+    if (event.keyCode === 27) {
+      // esc key pressed
+      closeLightBox()
     }
-
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this)
-
-    this.markerClick = this.markerClick.bind(this)
-
-    this.escFunction = event => {
-      if (event.keyCode === 27) {
-        // esc key pressed
-        this.closeLightBox()
-      }
-    }
   }
 
-  componentDidMount() {
-    this.updateWindowDimensions()
-    document.addEventListener('keydown', this.escFunction, false)
-    window.addEventListener('resize', this.updateWindowDimensions)
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.escFunction, false)
-    window.removeEventListener('resize', this.updateWindowDimensions)
-  }
-
-  markerClick = index => {
-    const {
-      locations: { edges },
-    } = this.props
-    this.setState({ currLightboxItem: edges[index].node })
-  }
-
-  calcLabelOffset = labelDir => {
+  const calcLabelOffset = labelDir => {
     switch (labelDir) {
       case 'top':
         return [0, 25]
@@ -77,70 +61,77 @@ export default class MapPage extends React.Component {
     }
   }
 
-  closeLightBox = () => {
-    this.setState({ currLightboxItem: null })
-  }
+  useEffect(() => {
+    // This gets called after every render, by default
+    // (the first one, and every one after that)
+    console.log('render!')
+    updateWindowDimensions()
+    document.addEventListener('keydown', escFunction, false)
+    window.addEventListener('resize', updateWindowDimensions)
 
-  updateWindowDimensions() {
-    // console.log(window.innerWidth, window.innerHeight)
-    this.setState({ height: window.innerHeight })
-  }
+    // If you want to implement componentWillUnmount,
+    // return a function from here, and React will call
+    // it prior to unmounting.
+    return () => {
+      document.removeEventListener('keydown', escFunction, false)
+      window.removeEventListener('resize', updateWindowDimensions)
+    }
+  })
 
-  render() {
-    const { currLightboxItem, height } = this.state
-    const { locations } = this.props
+  const inBrowser = (typeof window !== 'undefined')
 
-    if (typeof window !== 'undefined') {
-      return (
-        <>
-          {currLightboxItem && <MapLightBox content={currLightboxItem} closeLightBox={this.closeLightBox} />}
-          <Map
-            className='map'
-            crs={L.CRS.Simple}
+  return (
+
+    <>
+      {currLightboxItem && <MapLightBox content={currLightboxItem} closeLightBox={closeLightBox} />}
+
+      {inBrowser && (
+        <Map
+          className='map'
+          crs={L.CRS.Simple}
+          bounds={[
+            [0, 0],
+            [1260, 1920]
+          ]}
+          minZoom={-0.5}
+          maxZoom={0.5}
+          zoomSnap={0.1}
+          // center={[20, 960]}
+          style={{height: `${(height - 116).toString()}px`, marginTop: '116px'}}
+        >
+          <ImageOverlay
+            url={mapimage}
             bounds={[
               [0, 0],
-              [1260, 1920],
+              [1260, 1920]
             ]}
-            minZoom={-0.5}
-            maxZoom={0.5}
-            zoomSnap={0.1}
-            // center={[20, 960]}
-            style={{ height: `${(height - 116).toString()}px`, marginTop: '116px' }}
-          >
-            <ImageOverlay
-              url={mapimage}
-              bounds={[
-                [0, 0],
-                [1260, 1920],
-              ]}
-            />
-            {/* <Polygon
+          />
+          {/* <Polygon
             positions={[[300, 900], [300, 600], [600, 600], [600, 900]]}
             color="blue"
             onClick={this.MarkerClick}
           /> */}
-            {locations.edges.map(({ node }, index) => {
-              const latLong = [node.y, node.x]
-              const currOffset = this.calcLabelOffset(node.labelDirection)
-              // console.log(node.labelDirection)
+          {locations.edges.map(({node}, index) => {
+            const latLong = [node.y, node.x]
+            const currOffset = calcLabelOffset(node.labelDirection)
+            // console.log(node.labelDirection)
 
-              return (
-                <Marker
-                  key={latLong}
-                  position={latLong}
-                  onClick={() => this.markerClick(index)}
-                >
-                  <Tooltip permanent interactive direction={node.labelDirection} offset={currOffset}>
-                    {node.title}
-                  </Tooltip>
-                </Marker>
-              )
-            })}
-          </Map>
-        </>
-      )
-    }
-    return null
-  }
+            return (
+              <Marker
+                key={latLong}
+                position={latLong}
+                onClick={() => markerClick(index)}
+              >
+                <Tooltip permanent interactive direction={node.labelDirection} offset={currOffset}>
+                  {node.title}
+                </Tooltip>
+              </Marker>
+            )
+          })}
+        </Map>
+      )}
+    </>
+  )
 }
 
+export default MapPage

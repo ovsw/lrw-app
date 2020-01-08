@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { useState } from 'react' // eslint-disable-line
 
-import {jsx} from 'theme-ui'
+import {jsx, Styled} from 'theme-ui'
 // import {Box, Flex} from '@theme-ui/components'
 import Img from 'gatsby-image'
 import {FaTimesCircle} from 'react-icons/fa'
@@ -43,37 +43,39 @@ const LightBox = ({content: {title, description, images}, closeLightBox}) => {
         borderRadius: 'default',
         display: 'flex',
         position: 'relative',
-        p: 4,
+        p: '1px',
         flexDirection: ['column', 'column', 'row'],
         maxHeight: '90%',
         width: ['95%', '95%', '700px', '800px', '1000px'],
         zIndex: '12'
       }}>
+        <Img fluid={images[activeImage].asset.large} sx={{
+          width: ['100%', '100%', '1/2'],
+          backgroundImage: `url('${LoaderImage}')`,
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          borderRadius: '0.25rem  0 0 0.25rem'
+          // border: '1px solid #006600'
+        }} />
         <div onClick={closeLightBox} sx={{
           position: 'absolute',
           cursor: 'pointer',
           color: 'primary',
           bottom: '1rem',
           right: '0.75rem',
-          top: '1rem'
+          top: '0.65rem',
+          fontSize: '2rem'
         }}>
           <FaTimesCircle />
         </div>
-        <Img fluid={images[activeImage].asset.large} sx={{
-          width: ['100%', '100%', '1/2'],
-          backgroundImage: `url('${LoaderImage}')`,
-          backgroundPosition: 'center center',
-          backgroundRepeat: 'no-repeat',
-          border: '1px solid #006600'
-        }} />
         <div sx={{width: ['auto', 'auto', '1/2'], p: 4, fontSize: 'small'}}>
-          <h2>{title}</h2>
+          <Styled.h3 as='h2' sx={{mt: '0'}}>{title}</Styled.h3>
           <p sx={{display: ['none', 'none', 'block']}}
           // dangerouslySetInnerHTML={{
           //   __html: description
           // }}
           >{description}</p>
-          <div sx={{display: 'flex', flexWrap: 'wrap'}}>
+          <div sx={{display: 'flex', flexWrap: 'wrap', mt: 3}}>
             {images.map((image, index) => (
               <a
                 url={image.url}
