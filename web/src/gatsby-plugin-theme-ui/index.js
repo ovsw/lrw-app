@@ -572,7 +572,7 @@ export default {
       'fontWeight': 'bold',
       'color': 'primary',
       'cursor': 'pointer',
-      'display': ['inline-block', 'inline-block', 'none']
+      'display': ['inline', 'inline', 'none']
     },
     topBar: {
       'display': 'inline-block',
