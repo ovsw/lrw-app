@@ -24,9 +24,9 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
       boxShadow: '0 3px 12px rgba(0,0,0,0.3)'
     }}>
       <Container className='HeaderContainer' sx={{pt: 2, pb: 0, maxWidth: '5xl'}}>
-        {/* <TopBar /> */}
+        <TopBar />
         <Flex sx={{position: ['static', 'relative'], justifyContent: 'space-between'}} className='MainNav'>
-          <Box sx={{flex: 'flex: 1 1 0%', display: 'flex', alignItems: 'center'}}>
+          <Box sx={{flex: 'flex: 1 1 0%', display: ['flex', 'flex', 'block'], alignItems: 'center'}}>
             <Link to='/' sx={{variant: 'links.logoText'}}><span>Camp Laurelwood</span></Link>
           </Box>
 

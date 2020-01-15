@@ -664,23 +664,27 @@ export default {
       }
     },
     'navSub': {
-      color: 'primaryDarker',
+      color: ['light', 'light', 'primaryDarker'],
+      display: 'block',
       textDecoration: 'none',
       textTransform: 'uppercase',
-      fontSize: '1',
+      fontSize: ['14px', '1'],
+      lineHeight: 'snug',
       letterSpacing: '0.01rem',
       '&:hover': {
-        color: 'dark',
+        color: ['light', 'light', 'dark'],
         textDecoration: 'underline'
       }
     },
     'navSub2': {
-      color: 'primaryDarker',
+      color: ['light', 'light', 'primaryDarker'],
+      display: 'block',
       textDecoration: 'none',
       textTransform: 'uppercase',
-      fontSize: '1',
+      fontSize: ['14px', '1'],
+      lineHeight: 'snug',
       '&:hover': {
-        color: 'dark',
+        color: ['light', 'light', 'dark'],
         textDecoration: 'underline'
       }
     },

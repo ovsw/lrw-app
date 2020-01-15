@@ -20,9 +20,9 @@ const MainNav = ({navStructure, showNav}) => {
           transition: 'all 400ms ease-out',
           position: ['absolute', 'absolute'],
           width: 'auto',
-          height: ['84vh', '92vh'],
+          height: ['88vh', '90vh'],
           overflow: 'scroll',
-          top: ['16vh', '8vh'],
+          top: ['12vh', '10vh'],
           left: 0,
           right: 0,
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.25)'
@@ -32,7 +32,7 @@ const MainNav = ({navStructure, showNav}) => {
           variant: 'lists.reset',
           m: 0,
           pt: [0, 0],
-          pb: [4, 4],
+          pb: [0, 4],
           px: 0,
           display: ['block', 'block', 'flex'],
           justifyContent: 'flex-end'
@@ -46,7 +46,7 @@ const MainNav = ({navStructure, showNav}) => {
 
       </nav>
 
-      {/* destop */}
+      {/* desktop */}
       <nav
         sx={{
           display: ['none', 'none', 'block'],
@@ -79,7 +79,8 @@ const MainNav = ({navStructure, showNav}) => {
                       left: '100px',
                       marginLeft: '-100px',
                       top: '-45px',
-                      textAlign: 'center'}}>
+                      textAlign: 'center'
+                    }}>
                       <img src={LogoImage} sx={{
                         width: '110px'
                       }} alt='Camp Laurelwood Logo' />
