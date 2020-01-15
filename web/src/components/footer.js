@@ -12,7 +12,7 @@ import FooterBg from '../images/cl_summer_2016_web_files-73.jpg'
 
 const Footer = () => {
   return (
-    <ThemeFooter sx={{display: 'block', background: `url('${FooterBg}') no-repeat bottom left`, backgroundSize: 'cover', backgroundColor: 'primaryDark', color: 'gray.4'}}>
+    <ThemeFooter sx={{display: 'block', background: `url('${FooterBg}') no-repeat top center`, backgroundSize: 'cover', backgroundColor: 'primaryDark', color: 'gray.4'}}>
       <Container>
         <Flex sx={{flexWrap: 'wrap', py: [4, 4, 5, 6]}}>
           <Box sx={{width: ['full', '1/2'], px: [0, 4], py: [4, 0], textAlign: ['center', 'right'], borderRight: ['none', '1px solid lightgray']}}>
