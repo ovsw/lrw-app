@@ -18,7 +18,7 @@ const Footer = () => {
       footerBgImage: file(relativePath: { eq: "cl_summer_2016_web_files-73.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1024, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }
