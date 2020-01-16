@@ -1,16 +1,15 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
 import {jsx, Styled, Container} from 'theme-ui'
+import {useStaticQuery, graphql} from 'gatsby'
 import Slider from 'react-slick'
+import BackgroundImage from 'gatsby-background-image'
 
 import TestimonialItem from './testimonial-item'
 
 // styles
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-
-// images
-import SectionBg from '../../../images/img-bg-2.png'
 
 function NextArrow (props) {
   const {className, style, onClick} = props
@@ -40,7 +39,7 @@ function PrevArrow (props) {
         right: '-1rem',
         '&::before': {
           fontSize: '2rem',
-          color: 'primary'
+          color: 'primaryDark'
         }
       }}
       onClick={onClick}
@@ -49,7 +48,21 @@ function PrevArrow (props) {
 }
 
 const TestimonialsSection = () => {
-  const settings = {
+  const {testimonialsBgImage} = useStaticQuery(
+    graphql`
+    query {
+      testimonialsBgImage: file(relativePath: { eq: "img-bg-2.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+    `
+  )
+
+  const slickSettings = {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -123,22 +136,25 @@ const TestimonialsSection = () => {
     )
   }
   return (
-    <section sx={{
-      variant: 'sections.hpSection',
-      py: [5, 5, 5, 6],
-      pb: [6, 5, 5, 6],
-      background: `url(${SectionBg}) repeat-x bottom left`,
-      marginBottom: '-3rem',
-      position: 'relative',
-      zIndex: '2'
-    }}>
+    <BackgroundImage tag='section' quality='90' fluid={testimonialsBgImage.childImageSharp.fluid}
+      sx={{
+        variant: 'sections.hpSection',
+        py: [5, 5, 5, 6],
+        pb: [6, 5, 5, 6],
+        // background: `url(${SectionBg}) repeat-x bottom left`,
+        backgroundColor: 'transparent',
+        backgroundPosition: 'bottom center',
+        marginBottom: '-3rem',
+        position: 'relative',
+        zIndex: '2'
+      }}>
       <Styled.h1 as='h2' sx={{textAlign: 'center', color: 'accent'}}>What Campers Say</Styled.h1>
       <Container sx={{maxWidth: '6xl', px: ['2.8rem', 5, 0]}}>
-        <Slider {...settings}>
+        <Slider {...slickSettings}>
           {testimonialsContentTemp.map(testimonial => <TestimonialItem {...testimonial} key={testimonial.name} />)}
         </Slider>
       </Container>
-    </section>
+    </BackgroundImage>
   )
 }
 
