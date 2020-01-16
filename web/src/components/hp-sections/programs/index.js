@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {Link} from 'gatsby'
+import {Link, useStaticQuery, graphql} from 'gatsby'
+import Img from 'gatsby-image'
 import {jsx, Container, Styled} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 
-import {FaChevronRight} from 'react-icons/fa'
+// import {FaChevronRight} from 'react-icons/fa'
 
 // containers
 import SectionWithSidebar from '../../../containers/section-with-sidebar'
@@ -13,9 +14,35 @@ import ProgramItem from './program'
 
 // images
 import SectionBg from '../../../images/yellow-paper-bg.jpg'
-import {relative} from 'path'
+// import {relative} from 'path'
 
 const Programs = () => {
+  const {trialSessionsImage, specialtyCampImage} = useStaticQuery(
+    graphql`
+    query {
+      trialSessionsImage: file(relativePath: { eq: "ropes-jordan.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 780, quality: 90) {
+            ...GatsbyImageSharpFluid
+          }
+          fixed(width: 700, height: 600, quality: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      specialtyCampImage: file(relativePath: { eq: "circus-2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 780, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+          fixed(width: 700, height: 550, quality: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+    `
+  )
   return (
     <section sx={{
       variant: 'sections.hpSection',
@@ -27,15 +54,16 @@ const Programs = () => {
           fontFamily: 'body', fontWeight: 'normal', letterSpacing: '-0.1rem', fontSize: 4
         }
       }}>
+
         <Flex>
 
           <div sx={{width: ['full', 'full', '1/2']}}>
-
             <Styled.h2 as='h2' sx={{mb: 2, mt: 0}}>Trial Sessions</Styled.h2>
+
+            {/* <Styled.h2 as='h2' sx={{mb: 2, mt: 0}}>Trial Sessions</Styled.h2> */}
             <Flex sx={{
               flexWrap: 'wrap',
               'div': {
-
                 pr: 4,
                 // width: ['full', 'full', '1/2', '1/5'],
                 'p': {
@@ -53,15 +81,16 @@ const Programs = () => {
               </Box>
               <Box>
                 <Styled.h3>Taste of Laurelwood:</Styled.h3>
-                <p> Three wonderful days to introduce your camper to Laurelwood and the sleepaway camp experience. Drop off is Thursday at 10 am and pick up is Sunday at 1:00 pm.<br />
-                  <Link to='/programs/trial-sessions/' sx={{variant: 'buttons.3DAccent', mt: 4, display: 'inline-block'}}>More about Trial Sessions</Link></p>
+                <p> Three wonderful days to introduce your camper to Laurelwood and the sleepaway camp experience. Drop off is Thursday at 10 am and pick up is Sunday at 1:00 pm.
+                </p>
 
               </Box>
+              <Link to='/programs/trial-sessions/' sx={{variant: 'buttons.3DAccent', mt: 4, display: 'inline-block'}}>More about Trial Sessions</Link>
 
             </Flex>
           </div>
           <div sx={{width: ['full', 'full', '1/2'], pl: 4}}>
-            <Styled.h2 as='h2' sx={{mb: 2, mt: 0}}>Specialty Camps</Styled.h2>
+            {/* <Styled.h2 as='h2' sx={{mb: 2, mt: 0}}>Specialty Camps</Styled.h2> */}
             <Flex sx={{
               flexWrap: 'wrap',
               'div': {
@@ -75,20 +104,38 @@ const Programs = () => {
               }
             }}>
 
-              <Box>
+              {/* <Box>
                 <Styled.h3>Enhance your summer fun with Laurelwood Specialty Camps! </Styled.h3>
                 <p> Each program will combine immersive, professional instruction and skill development with our high-energy summer camp fun for an intense, well-rounded experience.<br /> <br /> Campers will master new skills, make new friends and gain a stronger sense of community with an emphasis on the values of teamwork, cooperation and sportsmanship. <Link to='/programs/specialty-camps/' sx={{variant: 'buttons.3DAccent', mt: 4, display: 'inline-block'}}>More about Specialty Camps</Link></p>
 
+              </Box> */}
+              <Box sx={{width: ['full', 'full', '1/2']}}>
+                <Img fixed={trialSessionsImage.childImageSharp.fixed} sx={{width: ['100px', '600px']}} />
               </Box>
-
             </Flex>
           </div>
         </Flex>
+
       </Container>
 
       <Container sx={{maxWidth: '7xl'}}><Styled.h2 sx={{mt: '0'}}>Laurelwood Main Programs:</Styled.h2></Container>
 
       <SectionWithSidebar sidebar={<Sidebar />} mainContent={<MainContent />} />
+      <Container sx={{maxWidth: '7xl'}}>
+        <Flex>
+          <Box sx={{width: ['full', 'full', '1/2'], position: 'relative'}}>
+            <div sx={{position: 'absolute', right: '2rem', top: '0'}}>
+
+              <Img fixed={specialtyCampImage.childImageSharp.fixed} sx={{width: ['100px', '600px']}} />
+            </div>
+          </Box>
+          <Box sx={{width: ['full', 'full', '1/2']}}>
+            <Styled.h2>Specialty Camps</Styled.h2>
+            <Styled.h3>Enhance your summer fun with Laurelwood Specialty Camps! </Styled.h3>
+            <p> Each program will combine immersive, professional instruction and skill development with our high-energy summer camp fun for an intense, well-rounded experience.<br /> <br /> Campers will master new skills, make new friends and gain a stronger sense of community with an emphasis on the values of teamwork, cooperation and sportsmanship. <Link to='/programs/specialty-camps/' sx={{variant: 'buttons.3DAccent', mt: 4, display: 'inline-block'}}>More about Specialty Camps</Link></p>
+          </Box>
+        </Flex>
+      </Container>
     </section >
   )
 }
