@@ -321,6 +321,20 @@ export default {
       'height': '1px',
       'm': 3
     },
+    'img': {
+      mt: 4
+    },
+    '.contentImage': {
+      m: '0',
+      p: '0'
+    },
+    'figcaption': {
+      textAlign: 'center',
+      fontSize: 1,
+      mt: 2,
+      mb: 4,
+      fontStyle: 'italic'
+    },
     'table': {
       width: '100%',
       textAlign: 'left',
@@ -682,7 +696,7 @@ export default {
       textDecoration: 'none',
       textTransform: 'uppercase',
       fontSize: ['14px', '1'],
-      lineHeight: 'snug',
+      lineHeight: ['snug', 'snug', 'normal'],
       '&:hover': {
         color: ['light', 'light', 'dark'],
         textDecoration: 'underline'
