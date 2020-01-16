@@ -14,9 +14,9 @@ const SectionThreeColumns = () => {
         <div sx={{variant: 'styles', mt: 5, px: 2, textAlign: 'center', maxWidth: '3xl', mx: 'auto'}}>
           <p>We offer both Overnight and Day Camp <Link to='/programs/'>programs</Link>, lots of fun <Link to='/activities/'>activities</Link> and a warm welcoming community. </p>
         </div>
-        <Flex sx={{mt: 5}}>
+        <Flex sx={{mt: 5, flexWrap: 'wrap'}}>
           {columnsContent.map(column => (
-            <Box key={column.title} sx={{width: '1/2', px: 3, display: 'flex'}}><Column {...column} /></Box>
+            <Box key={column.title} sx={{width: ['full', '1/2'], px: 3, display: 'flex'}}><Column {...column} /></Box>
           ))}
         </Flex>
       </Container>
@@ -28,7 +28,7 @@ const columnsContent = [
   {
     title: 'Our Mission',
     icon: 'teenagers',
-    text: 'To provide a fun, safe and inclusive environment that builds self-esteem and encourages personal growth for children ages 5-15. Our programs explore and enhance Jewish identity and values, encourage healthy lifestyle choices, and lay the foundation for positive, lifelong friendships.'
+    text: 'To provide a fun, safe and inclusive environment that builds self-esteem and encourages personal growth for children ages 5-15: explore and enhance Jewish identity and values, encourage healthy lifestyle choices, and lay the foundation for positive, lifelong friendships.'
   },
   {
     title: 'Our Vision',
