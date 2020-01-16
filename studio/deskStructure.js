@@ -157,11 +157,23 @@ export default () =>
                         .schemaType('page'),
                       S.documentListItem()
                         .id('letterFromTheDirector')
-                        .title('letterFromTheDirector')
+                        .title('Letter From The Director')
                         .schemaType('page'),
                       S.documentListItem()
                         .id('boardOfDirectors')
                         .title('Board of Directors')
+                        .schemaType('page'),
+                      S.documentListItem()
+                        .id('acaAccreditation')
+                        .title('ACA Accreditation')
+                        .schemaType('page'),
+                      S.documentListItem()
+                        .id('history')
+                        .title('History')
+                        .schemaType('page'),
+                      S.documentListItem()
+                        .id('location')
+                        .title('Location')
                         .schemaType('page'),
                       S.documentListItem()
                         .id('alumni')
@@ -184,6 +196,7 @@ export default () =>
                 .schemaType('page'),
               S.listItem()
                 .title('Current Families Section Pages')
+                .icon(MdFolder)
                 .child(
                   S.list()
                     .title('Current Families Section Pages')
