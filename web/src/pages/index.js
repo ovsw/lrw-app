@@ -54,7 +54,7 @@ const IndexPage = props => {
       <About />
       <Programs />
       <Lunch />
-      <LocationGmap />
+      {/* <LocationGmap /> */}
       <Testimonials />
 
       {/* {postNodes && (
