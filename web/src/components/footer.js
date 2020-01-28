@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {jsx, Styled, Container, Footer as ThemeFooter} from 'theme-ui'
+import {jsx, Styled, Container} from 'theme-ui'
 import {useStaticQuery, graphql} from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import {Box, Flex} from '@theme-ui/components'
