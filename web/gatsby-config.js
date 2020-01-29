@@ -253,6 +253,42 @@ module.exports = {
         children: []
       },
       {
+        title: 'Donate',
+        slug: '/donate/',
+        children: [
+          {
+            title: 'column 1',
+            children: [
+              {
+                title: 'Donate Today',
+                slug: '/donate-today/',
+                children: []
+              },
+              {
+                title: 'Send a Kid to Laurelwood',
+                slug: '/send-a-kid-to-laurelwood/',
+                children: []
+              }
+            ]
+          },
+          {
+            title: 'column 2',
+            children: [
+              {
+                title: 'Amazon Wishlist',
+                slug: '/amazon-wishlist/',
+                children: []
+              },
+              {
+                title: 'More ways to support Camp',
+                slug: '/more-ways-to-support-camp/',
+                children: []
+              }
+            ]
+          }
+        ]
+      },
+      {
         title: 'Staff',
         slug: '/staff/',
         children: [
