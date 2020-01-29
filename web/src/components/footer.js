@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
 import {jsx, Styled, Container} from 'theme-ui'
-import {useStaticQuery, graphql} from 'gatsby'
+import {useStaticQuery, graphql, Link} from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import {Box, Flex} from '@theme-ui/components'
 
@@ -34,7 +34,7 @@ const Footer = () => {
       backgroundColor: 'primaryDark',
       color: 'gray.4'}}>
       <Container>
-        <Flex sx={{flexWrap: 'wrap', py: [4, 4, 5, 6]}}>
+        <Flex sx={{flexWrap: 'wrap', pt: [4, 4, 5, 6], pb: [3, 3, 3, 5]}}>
           <Box sx={{width: ['full', '1/2'], px: [0, 4], py: [4, 0], textAlign: ['center', 'right'], borderRight: ['none', '1px solid lightgray']}}>
             <div className='vcard'>
               <div className='org'><Styled.h3 as='h3' sx={{mt: 0, color: 'light'}}>Camp Laurelwood</Styled.h3></div>
@@ -57,6 +57,19 @@ const Footer = () => {
             <img src={AcaLogoImg} sx={{maxWidth: 'full', width: '48'}} />
           </Box>
         </Flex>
+        <p sx={{
+          textAlign: 'center',
+          color: 'gray.5',
+          a: {
+            color: 'light'
+          }
+        }}>
+          <Link to='/staff/'>Staff</Link> |{' '}
+          <Link to='/terms-conditions/'>Terms &amp; Conditions</Link> |{' '}
+          <Link to='/privacy-policy/'>Privacy Policy</Link> |{' '}
+          <Link to='/ada-compliance/'>ADA Compliance</Link> |{' '}
+          <Link to='/contact/'>Contact</Link>
+        </p>
       </Container>
       <div sx={{textAlign: 'center', p: 3, fontSize: 1, color: 'muted', bg: 'rgba(0,0,0,0.5)'}}>
         &copy; {new Date().getFullYear()}, Camp Laurelwood
