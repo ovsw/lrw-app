@@ -57,7 +57,9 @@ export default {
         list: [
           {title: 'Prospective Families', value: 'Prospective Families'},
           {title: 'About us', value: 'About Laurelwood'},
-          {title: 'Current Families', value: 'Current Families'}
+          {title: 'Current Families', value: 'Current Families'},
+          {title: 'Donate', value: 'Donate'},
+          {title: 'Staff', value: 'Staff'}
         ],
         layout: 'radio',
         direction: 'horizontal'
