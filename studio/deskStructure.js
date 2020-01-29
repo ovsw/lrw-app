@@ -234,7 +234,57 @@ export default () =>
               S.documentListItem()
                 .id('eventsRetreats')
                 .title('Private Events & Retreats')
-                .schemaType('page')
+                .schemaType('page'),
+              S.documentListItem()
+                .id('donateNow')
+                .title('Donate Now')
+                .schemaType('donateNowPage'),
+              S.listItem()
+                .title('Donate Now Pages')
+                .icon(MdFolder)
+                .child(
+                  S.list()
+                    .title('Donate Now Pages')
+                    .items([
+                      S.documentListItem()
+                        .id('donateToday')
+                        .title('Donate Today')
+                        .schemaType('page'),
+                      S.documentListItem()
+                        .id('sendAKidToLRW')
+                        .title('Send a Kid to Laurelwood')
+                        .schemaType('page'),
+                      S.documentListItem()
+                        .id('amazonWishlist')
+                        .title('Amazon Wishlist')
+                        .schemaType('page'),
+                      S.documentListItem()
+                        .id('moreWaysToSupport')
+                        .title('More Ways to Support Camp')
+                        .schemaType('page')
+                    ])
+                ),
+              S.documentListItem()
+                .id('staff')
+                .title('Staff')
+                .schemaType('page'),
+              S.listItem()
+                .title('Staff Pages')
+                .icon(MdFolder)
+                .child(
+                  S.list()
+                    .title('Staff Pages')
+                    .items([
+                      S.documentListItem()
+                        .id('currentOpenings')
+                        .title('Current Openings')
+                        .schemaType('page'),
+                      S.documentListItem()
+                        .id('staffTestimonials')
+                        .title('Staff Testimonials')
+                        .schemaType('page')
+                    ])
+                )
             ])),
       S.listItem()
         .title('News Items')

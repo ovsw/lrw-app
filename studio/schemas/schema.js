@@ -10,6 +10,7 @@ import category from './documents/category'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 import page from './documents/page'
+import donateNowPage from './documents/donateNowPage'
 import mapMarker from './documents/mapMarker'
 
 // Object types
@@ -36,6 +37,7 @@ export default createSchema({
     siteSettings,
     post,
     page,
+    donateNowPage,
     mapMarker,
     category,
     author,
