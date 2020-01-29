@@ -7,23 +7,16 @@ import Img from 'gatsby-image'
 import {FaSwimmer} from 'react-icons/fa'
 
 // containers
-import SectionWithSidebar from '../../containers/section-with-sidebar'
+// import SectionWithSidebar from '../../containers/section-with-sidebar'
+import Section2ColFull from '../../containers/section-2col-full'
 
-const FoodSection = () => {
-  return (
-    <section sx={{variant: 'sections.hpSectionLightNoBottom'}}>
-      <SectionWithSidebar leftSidebar mainContent={<MainContent />} sidebar={<Sidebar />} />
-    </section>
-  )
-}
-
-const MainContent = () => {
+const SwimSection = () => {
   const {swimImage} = useStaticQuery(
     graphql`
     query {
       swimImage: file(relativePath: { eq: "swim-lessons.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 726) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -32,16 +25,11 @@ const MainContent = () => {
     `
   )
   return (
-    <div sx={{
-      mr: [0, 4]
-    }}>
-      <Img fluid={swimImage.childImageSharp.fluid} />
-      {/* <img src='https://via.placeholder.com/726x600' sx={{pr: 4}} /> */}
-    </div>
+    <Section2ColFull theme='simple' content={<SwimSectionContent />} fluidBgImg={swimImage.childImageSharp.fluid} reverse />
   )
 }
 
-const Sidebar = () => {
+const SwimSectionContent = () => {
   return (
     <div sx={{p: {lineHeight: 'snug'}}}>
       <Styled.h1 as='h2'>Swim Lessons</Styled.h1>
@@ -55,4 +43,4 @@ const Sidebar = () => {
   )
 }
 
-export default FoodSection
+export default SwimSection

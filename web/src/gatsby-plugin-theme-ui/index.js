@@ -5,6 +5,7 @@
 import SectionBorderTop from '../images/torn-bg-white-t.png'
 import SectionBorderBottom from '../images/torn-bg-white-b.png'
 import WhitePaper from '../images/white-paper-bg2.jpg'
+import YellowPaperBg from '../images/yellow-paper-bg.jpg'
 
 const sharedButtonStyles = {
   'py': 3,
@@ -762,6 +763,12 @@ export default {
     hpSection: {
       py: [3, 4, 5, 6],
       bg: 'background'
+    },
+    hpSectionPaper: {
+      background: `url(${YellowPaperBg}) repeat center center`
+    },
+    hpSectionSimple: {
+      bg: 'white'
     },
     hpSectionLight: {
       py: [3, 4, 4, 5],

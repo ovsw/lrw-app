@@ -14,9 +14,9 @@ import Layout from '../containers/layout'
 import Hero from '../components/hp-sections/hero'
 // import Transportation from '../components/hp-sections/transportation'
 import About from '../components/hp-sections/about-section'
-import Lunch from '../components/hp-sections/swim-lessons'
+import Swim from '../components/hp-sections/swim-lessons'
 import Programs from '../components/hp-sections/programs'
-import LocationGmap from '../components/hp-sections/location-gmap'
+// import LocationGmap from '../components/hp-sections/location-gmap'
 import Testimonials from '../components/hp-sections/testimonials'
 
 const IndexPage = props => {
@@ -53,7 +53,7 @@ const IndexPage = props => {
       <Hero />
       <About />
       <Programs />
-      <Lunch />
+      <Swim />
       {/* <LocationGmap /> */}
       <Testimonials />
 
