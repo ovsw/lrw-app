@@ -776,7 +776,7 @@ export default {
       position: 'relative',
       zIndex: '10',
       '&::before': {
-        background: `url(${SectionBorderTop}) repeat-x top center`,
+        background: `url(${SectionBorderTop}) repeat-x top left`,
         content: '""',
         position: 'absolute',
         top: '-42px',
@@ -785,7 +785,7 @@ export default {
         height: '43px'
       },
       '&::after': {
-        background: `url(${SectionBorderBottom}) repeat-x bottom center`,
+        background: `url(${SectionBorderBottom}) repeat-x bottom right`,
         content: '""',
         position: 'absolute',
         bottom: '-40px',
