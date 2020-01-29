@@ -8,6 +8,8 @@ import Leader from './leader'
 import Sun from './sun'
 import Moon from './moon'
 import StarOfDavid from './star-of-david'
+import Donate from './donate'
+import GiftList from './gift-list'
 
 function Icon (props) {
   switch (props.symbol) {
@@ -29,6 +31,10 @@ function Icon (props) {
       return <Moon />
     case 'starOfDavid':
       return <StarOfDavid />
+    case 'donate':
+      return <Donate />
+    case 'gift-list':
+      return <GiftList />
     default:
       return <span>Unknown icon: {props.symbol}</span>
   }

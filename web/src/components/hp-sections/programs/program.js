@@ -5,7 +5,7 @@ import {Link} from 'gatsby'
 
 import Icon from '../../icon'
 
-const ProgramItem = ({name, icon = 'pineCone', iconSize = '3rem', description, link, layout = 'normal'}) => {
+const ProgramItem = ({name, icon = 'pineCone', iconSize = '4.7rem', description, link, layout = 'normal'}) => {
   const flexDirection = layout === 'wide' ? 'row' : 'column'
   const marginTop = layout === 'wide' ? '0' : 2
   const marginBottom = layout === 'wide' ? '0' : 1
@@ -32,7 +32,8 @@ const ProgramItem = ({name, icon = 'pineCone', iconSize = '3rem', description, l
             bg: 'background',
             border: '1px dashed red',
             borderColor: 'white',
-            p: '1.5rem',
+            px: '0.8rem',
+            pt: '0.2rem',
             color: 'primaryDark',
             mx: 'auto',
             transition: 'all 0.1s ease-out'

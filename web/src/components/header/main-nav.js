@@ -63,7 +63,7 @@ const MainNav = ({navStructure, showNav}) => {
           justifyContent: 'space-around'
         }}>
           {navStructure.map((mainMenuItem, i) => {
-            if (i === 4) { return }
+            if (i > 3) { return } // only show the first 4 items in the desktop menu
             if (i === 2) {
               return (
                 <React.Fragment key={mainMenuItem.slug}>

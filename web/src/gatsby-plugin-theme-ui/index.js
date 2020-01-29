@@ -726,6 +726,9 @@ export default {
       boxShadow: '0 0 12px -2px rgba(0,0,0,0.1)',
       background: `url(${WhitePaper})`,
       borderRadius: '7px',
+      borderWidth: '1px',
+      borderColor: 'primary',
+      borderStyle: 'dashed',
       bg: 'white',
       p: 4,
       m: 3,
@@ -740,7 +743,7 @@ export default {
           bg: 'bg',
           color: 'primaryDark',
           'svg': {
-            transform: 'scale(1.9)'
+            transform: 'scale(1.2)'
           }
         }
       },
