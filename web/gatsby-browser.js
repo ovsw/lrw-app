@@ -9,6 +9,10 @@
 import React from 'react'
 import Layout from './src/containers/layout'
 
+require('typeface-amatic-sc')
+require('typeface-open-sans')
+require('typeface-skranji')
+
 const wrapPageElement = ({element, props}) => {
   return <Layout {...props}>{element}</Layout>
 }

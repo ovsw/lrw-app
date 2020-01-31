@@ -6,10 +6,10 @@ import Header from './header'
 import Footer from './footer'
 
 // import 'typeface-dosis'
-import 'typeface-amatic-sc'
-import 'typeface-skranji'
-import 'typeface-open-sans'
-import 'typeface-lato'
+// import 'typeface-amatic-sc'
+// import 'typeface-skranji'
+// import 'typeface-open-sans'
+// import 'typeface-lato'
 
 const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
   <ThemeLayout>

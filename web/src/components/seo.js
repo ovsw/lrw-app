@@ -59,9 +59,7 @@ function SEO ({description, lang, meta, keywords, title, image}) {
               }
             ]
               .concat(meta)}
-          >
-            <link rel='stylesheet' href='https://use.typekit.net/iwc3izh.css' />
-          </Helmet>
+          />
         )
       }}
     />
@@ -70,7 +68,7 @@ function SEO ({description, lang, meta, keywords, title, image}) {
 
 SEO.defaultProps = {
   lang: 'en',
-  meta: [],
+  meta: []
 }
 
 SEO.propTypes = {
