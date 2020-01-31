@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
       testimonialsBgImage: file(relativePath: { eq: "img-bg-2.png" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }

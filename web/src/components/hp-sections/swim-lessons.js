@@ -17,7 +17,7 @@ const SwimSection = () => {
       swimImage: file(relativePath: { eq: "swim-lessons.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
