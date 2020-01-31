@@ -14,7 +14,7 @@ const TrialSessions = () => {
       specialtyCampImage: file(relativePath: { eq: "circus-2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 780, quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
           fixed(width: 700, height: 550, quality: 90) {
             ...GatsbyImageSharpFixed

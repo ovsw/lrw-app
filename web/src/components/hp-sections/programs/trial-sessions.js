@@ -14,7 +14,7 @@ const TrialSessions = () => {
       trialSessionsImage: file(relativePath: { eq: "ropes-jordan.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 780, quality: 90) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
           fixed(width: 700, height: 600, quality: 90) {
             ...GatsbyImageSharpFixed

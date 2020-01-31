@@ -51,7 +51,7 @@ const programs = [
   {
     name: 'Send a Kid to Laurelwood',
     icon: 'dayCamp',
-    description: 'Sponsor a child by payin their camp fees.',
+    description: 'Sponsor a child by paying their camp fees.',
     link: '/send-a-kid-to-laurelwood/'
   },
   {

@@ -297,22 +297,32 @@ module.exports = {
             children: [
               {
                 title: 'Welcome',
-                slug: '/welcome/',
+                slug: '/staff/welcome/',
                 children: []
               },
               {
                 title: 'Employment',
-                slug: '/employment/',
+                slug: '/staff/employment/',
+                children: []
+              },
+              {
+                title: 'Current Openings',
+                slug: '/staff/current-openings/',
                 children: []
               },
               {
                 title: 'Summer Dates',
-                slug: '/summer-dates/',
+                slug: '/staff/summer-dates/',
+                children: []
+              },
+              {
+                title: 'Staff Testimonials',
+                slug: '/staff/staff-testimonials/',
                 children: []
               },
               {
                 title: 'Apply',
-                slug: '/staff-application/',
+                slug: '/staff/staff-application/',
                 children: []
               }
             ]
