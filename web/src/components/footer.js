@@ -2,23 +2,28 @@
 import React from 'react' // eslint-disable-line
 import {jsx, Styled, Container} from 'theme-ui'
 import {useStaticQuery, graphql, Link} from 'gatsby'
+import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 import {Box, Flex} from '@theme-ui/components'
 
 // components
 import SocialLinks from './socialLinks'
 
-// images
-import AcaLogoImg from '../images/aca-logo.png'
-
 const Footer = () => {
-  const {footerBgImage} = useStaticQuery(
+  const {footerBgImage, acaLogoImage} = useStaticQuery(
     graphql`
     query {
       footerBgImage: file(relativePath: { eq: "cl_summer_2016_web_files-73.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1024, quality: 100) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 1024, quality: 80) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      acaLogoImage: file(relativePath: { eq: "aca-logo.png" }) {
+        childImageSharp {
+          fixed(width: 192, quality: 90) {
+            ...GatsbyImageSharpFixed_noBase64
           }
         }
       }
@@ -26,7 +31,7 @@ const Footer = () => {
     `
   )
   return (
-    <BackgroundImage as='ThemeFooter' fluid={footerBgImage.childImageSharp.fluid} sx={{
+    <BackgroundImage fadeIn={false} as='ThemeFooter' fluid={footerBgImage.childImageSharp.fluid} sx={{
       display: 'block',
       // background: `url('${FooterBg}') no-repeat top center`,
       backgroundPosition: 'top center',
@@ -54,7 +59,7 @@ const Footer = () => {
           </Box>
           <Box sx={{width: ['full', '1/2'], px: 4, textAlign: 'center'}}>
             <SocialLinks />
-            <img src={AcaLogoImg} sx={{maxWidth: 'full', width: '48'}} />
+            <Img fixed={acaLogoImage.childImageSharp.fixed} sx={{maxWidth: 'full', width: '48'}} />
           </Box>
         </Flex>
         <p sx={{

@@ -2,14 +2,26 @@
 import React from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
 import {Flex} from '@theme-ui/components'
-import {Link} from 'gatsby'
+import {Link, useStaticQuery, graphql} from 'gatsby'
+import Img from 'gatsby-image'
 
 // components
 import MobileMenu from './mobile-menu'
 import MegaMenu from './mega-menu'
-import LogoImage from '../../images/camp-laurelwood-logo.png'
 
 const MainNav = ({navStructure, showNav}) => {
+  const {logoImage} = useStaticQuery(graphql`
+  query{
+    logoImage: file(relativePath: { eq: "camp-laurelwood-logo.png" }) {
+      childImageSharp {
+        fixed(width: 110) {
+          ...GatsbyImageSharpFixed_noBase64
+        }
+      }
+    }
+  }
+`)
+
   return (
     <>
       {/* mobile */}
@@ -81,7 +93,7 @@ const MainNav = ({navStructure, showNav}) => {
                       top: '-45px',
                       textAlign: 'center'
                     }}>
-                      <img src={LogoImage} sx={{
+                      <Img fixed={logoImage.childImageSharp.fixed} fadeIn={false} critical sx={{
                         width: '110px'
                       }} alt='Camp Laurelwood Logo' />
                     </Link></li>
