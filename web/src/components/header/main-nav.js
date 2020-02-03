@@ -9,7 +9,7 @@ import Img from 'gatsby-image'
 import MobileMenu from './mobile-menu'
 import MegaMenu from './mega-menu'
 
-const MainNav = ({navStructure, showNav}) => {
+const MainNav = ({navStructure, showNav, onHideNav}) => {
   const {logoImage} = useStaticQuery(graphql`
   query{
     logoImage: file(relativePath: { eq: "camp-laurelwood-logo.png" }) {
@@ -34,7 +34,7 @@ const MainNav = ({navStructure, showNav}) => {
           width: 'auto',
           height: ['88vh', '90vh'],
           overflow: 'scroll',
-          top: ['12vh', '10vh'],
+          top: ['12vh', '7vh'],
           left: 0,
           right: 0,
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.25)'
@@ -51,7 +51,7 @@ const MainNav = ({navStructure, showNav}) => {
         }}>
           {navStructure.map((mainMenuItem, i) => {
             return (
-              <MobileMenu key={mainMenuItem.slug} menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} />
+              <MobileMenu key={mainMenuItem.slug} menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} onHideNav={onHideNav} />
             )
           })}
         </Flex>

@@ -25,6 +25,7 @@ class MobileMenu extends React.Component {
     }
 
     this.onNavClick = () => {
+      this.props.onHideNav()
       this.hideSubMenu()
     }
 
@@ -34,7 +35,7 @@ class MobileMenu extends React.Component {
   }
 
   render () {
-    const {menuTitle, mainLink, menuColumns} = this.props
+    const {menuTitle, mainLink, menuColumns, onHideNav} = this.props
     const {subMenuVisible} = this.state
 
     return (
@@ -48,6 +49,7 @@ class MobileMenu extends React.Component {
           role='link'
           tabIndex='-1'
           to={mainLink}
+          onClick={onHideNav}
           sx={{
             variant: 'links.navMain',
             color: 'white'

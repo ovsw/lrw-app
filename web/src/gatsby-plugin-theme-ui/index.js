@@ -49,7 +49,7 @@ export default {
     'text': '#6c6b73',
     'background': '#d2edf6',
     'primary': '#6ebf34',
-    'secondary': '#4cb0af',
+    'secondary': '#592203',
     'accent': '#ff6644',
     'accentDark': '#c53319',
     'accentLight': '#ffff86',
@@ -585,7 +585,7 @@ export default {
     logoText: {
       'textDecoration': 'none',
       'fontWeight': 'bold',
-      'color': 'primary',
+      'color': 'secondary',
       'cursor': 'pointer',
       'display': ['inline', 'inline', 'none']
     },
@@ -603,7 +603,7 @@ export default {
       }
     },
     navMain: {
-      color: '#592203',
+      color: 'secondary',
       letterSpacing: '0.05rem',
       p: '10px',
       position: 'relative',

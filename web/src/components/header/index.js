@@ -34,7 +34,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
             <Icon symbol='hamburger' />
           </button>
 
-          <MainNav navStructure={siteNav} showNav={showNav} />
+          <MainNav navStructure={siteNav} showNav={showNav} onHideNav={onHideNav} />
         </Flex>
       </Container>
     </ThemeHeader>
