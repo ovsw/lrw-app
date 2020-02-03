@@ -605,7 +605,8 @@ export default {
     navMain: {
       color: 'secondary',
       letterSpacing: '0.05rem',
-      p: '10px',
+      mt: '7px',
+      pb: '5px',
       position: 'relative',
       overflow: 'hidden',
       display: 'inline-block',
@@ -616,17 +617,17 @@ export default {
       fontFamily: 'heading',
       fontWeight: 'bold',
       '& span': {
-        '&::before': {
-          width: '100%',
-          height: '2px',
-          background: '#8a4c2d',
-          content: '""',
-          position: 'absolute',
-          left: '0',
-          top: '0',
-          transition: '.3s',
-          transform: 'translateX(-100%)'
-        },
+        // '&::before': {
+        //   width: '100%',
+        //   height: '2px',
+        //   background: '#8a4c2d',
+        //   content: '""',
+        //   position: 'absolute',
+        //   left: '0',
+        //   top: '0',
+        //   transition: '.3s',
+        //   transform: 'translateX(-100%)'
+        // },
         '&::after': {
           width: '30px',
           height: '4px',
@@ -640,28 +641,28 @@ export default {
           transform: 'translateX(-50%)'
         }
       },
-      '&::before': {
-        width: '2px',
-        height: '100%',
-        background: '#8a4c2d',
-        content: '""',
-        position: 'absolute',
-        left: '0',
-        top: '0',
-        transition: '.3s',
-        transform: 'translateY(-100%)'
-      },
-      '&::after': {
-        width: '2px',
-        height: '100%',
-        background: '#8a4c2d',
-        content: '""',
-        position: 'absolute',
-        right: '0',
-        bottom: '0',
-        transition: '.3s',
-        transform: 'translateY(100%)'
-      },
+      // '&::before': {
+      //   width: '2px',
+      //   height: '100%',
+      //   background: '#8a4c2d',
+      //   content: '""',
+      //   position: 'absolute',
+      //   left: '0',
+      //   top: '0',
+      //   transition: '.3s',
+      //   transform: 'translateY(-100%)'
+      // },
+      // '&::after': {
+      //   width: '2px',
+      //   height: '100%',
+      //   background: '#8a4c2d',
+      //   content: '""',
+      //   position: 'absolute',
+      //   right: '0',
+      //   bottom: '0',
+      //   transition: '.3s',
+      //   transform: 'translateY(100%)'
+      // },
       '&:hover': {
         '&::before, &::after': {
           transform: 'translateX(0)'

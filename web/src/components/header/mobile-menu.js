@@ -52,7 +52,8 @@ class MobileMenu extends React.Component {
           onClick={onHideNav}
           sx={{
             variant: 'links.navMain',
-            color: 'white'
+            color: 'white',
+            px: 2
           }}
         >
           {menuTitle}

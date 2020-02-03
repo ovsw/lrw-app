@@ -14,7 +14,7 @@ const MainNav = ({navStructure, showNav, onHideNav}) => {
   query{
     logoImage: file(relativePath: { eq: "camp-laurelwood-logo.png" }) {
       childImageSharp {
-        fixed(width: 110) {
+        fixed(width: 119) {
           ...GatsbyImageSharpFixed_noBase64
         }
       }
@@ -34,7 +34,7 @@ const MainNav = ({navStructure, showNav, onHideNav}) => {
           width: 'auto',
           height: ['88vh', '90vh'],
           overflow: 'scroll',
-          top: ['12vh', '7vh'],
+          top: ['5.15rem', '5.15rem'],
           left: 0,
           right: 0,
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.25)'
@@ -94,7 +94,7 @@ const MainNav = ({navStructure, showNav, onHideNav}) => {
                       textAlign: 'center'
                     }}>
                       <Img fixed={logoImage.childImageSharp.fixed} fadeIn={false} critical sx={{
-                        width: '110px'
+                        width: '120px', position: 'relative', top: '-12px'
                       }} alt='Camp Laurelwood Logo' />
                     </Link></li>
                   <MegaMenu menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} key={mainMenuItem.slug} />

@@ -8,7 +8,7 @@ import {Link} from 'gatsby'
 const TopBar = () => {
   return (
     <div>
-      <Flex sx={{display: ['none', 'none', 'flex']}}>
+      <Flex sx={{display: ['none', 'none', 'flex'], pt: '7px'}}>
         <Box sx={{
           width: '1/2',
           textAlign: 'right',

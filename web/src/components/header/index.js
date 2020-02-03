@@ -21,7 +21,10 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
       position: 'fixed',
       width: '100%',
       zIndex: 9999,
-      boxShadow: '0 3px 12px rgba(0,0,0,0.3)'
+      boxShadow: '0 0 20px rgba(0,0,0,0.4)',
+      borderTop: '4px solid',
+      borderBottom: '2px solid',
+      borderColor: 'secondary'
     }}>
       <Container className='HeaderContainer' sx={{pt: 2, pb: 0, maxWidth: '5xl'}}>
         <TopBar />
