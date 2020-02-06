@@ -13,10 +13,10 @@ export default {
         __experimental_before: [
           {
             name: 'netlify',
-            title: 'Deploy Website front-end.',
             options: {
+              title: 'Push Published Content to live site.',
               description:
-                'NOTE: Any changes you make to the content will not appear in the front-end of the live website until you trigger a deploy of the front-end by clicking the Deploy Button below. For a change to appear in the front-end it needs to be published. Un-published changes will not appear in the live website.',
+                'NOTE: to make newly-published content appear in the front-end of the live website, you need to manally trigger a deploy by clicking the button below that says "Deploy"!',
               sites: [
                 // {
                 //   buildHookId: '5deb9176f80a08d42b13d0e2',
