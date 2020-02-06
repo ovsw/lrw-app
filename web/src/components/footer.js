@@ -70,10 +70,10 @@ const Footer = () => {
           }
         }}>
           <Link to='/staff/'>Staff</Link> |{' '}
-          <Link to='/staff/terms-conditions/'>Terms &amp; Conditions</Link> |{' '}
-          <Link to='/staff/privacy-policy/'>Privacy Policy</Link> |{' '}
-          <Link to='/staff/ada-compliance/'>ADA Compliance</Link> |{' '}
-          <Link to='/staff/contact/'>Contact</Link>
+          <Link to='/terms-and-conditions/'>Terms &amp; Conditions</Link> |{' '}
+          <Link to='/privacy-policy/'>Privacy Policy</Link> |{' '}
+          <Link to='/ada-compliance/'>ADA Compliance</Link> |{' '}
+          <Link to='/contact/'>Contact</Link>
         </p>
       </Container>
       <div sx={{textAlign: 'center', p: 3, fontSize: 1, color: 'muted', bg: 'rgba(0,0,0,0.5)'}}>
