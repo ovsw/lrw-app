@@ -2,7 +2,7 @@
 import React from 'react' // eslint-disable-line
 import {jsx, Styled} from 'theme-ui'
 import {Link, useStaticQuery, graphql} from 'gatsby'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 
 import {FaSwimmer} from 'react-icons/fa'
 

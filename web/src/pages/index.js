@@ -1,10 +1,10 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-// import {
-//   mapEdgesToNodes,
-//   filterOutDocsWithoutSlugs,
-//   filterOutDocsPublishedInTheFuture
-// } from '../lib/helpers'
+import {
+  mapEdgesToNodes,
+  filterOutDocsWithoutSlugs,
+  filterOutDocsPublishedInTheFuture
+} from '../lib/helpers'
 // import BlogPostPreviewList from '../components/blog-post-preview-list'
 // import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
@@ -18,6 +18,7 @@ import Swim from '../components/hp-sections/swim-lessons'
 import Programs from '../components/hp-sections/programs'
 // import LocationGmap from '../components/hp-sections/location-gmap'
 import Testimonials from '../components/hp-sections/testimonials'
+import LatestNews from '../components/hp-sections/latest-news'
 
 const IndexPage = props => {
   const {data, errors} = props
@@ -31,11 +32,11 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
-  // const postNodes = (data || {}).posts
-  //   ? mapEdgesToNodes(data.posts)
-  //     .filter(filterOutDocsWithoutSlugs)
-  //     .filter(filterOutDocsPublishedInTheFuture)
-  //   : []
+  const postNodes = (data || {}).posts
+    ? mapEdgesToNodes(data.posts)
+      .filter(filterOutDocsWithoutSlugs)
+      .filter(filterOutDocsPublishedInTheFuture)
+    : []
 
   if (!site) {
     throw new Error(
@@ -56,6 +57,7 @@ const IndexPage = props => {
       <Swim />
       {/* <LocationGmap /> */}
       <Testimonials />
+      <LatestNews posts={postNodes} />
 
       {/* {postNodes && (
           <BlogPostPreviewList
@@ -108,7 +110,11 @@ export const query = graphql`
           id
           publishedAt
           mainImage {
-            ...SanityImage
+            asset {
+              fluid(maxWidth: 700) {
+                ...GatsbySanityImageFluid
+              }
+            }
             alt
           }
           title
