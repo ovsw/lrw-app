@@ -300,7 +300,23 @@ export default () =>
                         .title('Apply')
                         .schemaType('page')
                     ])
-                )
+                ),
+              S.documentListItem()
+                .id('termsAndConditions')
+                .title('Terms & Conditions')
+                .schemaType('page'),
+              S.documentListItem()
+                .id('privacyPolicy')
+                .title('Privacy Policy')
+                .schemaType('page'),
+              S.documentListItem()
+                .id('adaCompliance')
+                .title('ADA Compliance')
+                .schemaType('page'),
+              S.documentListItem()
+                .id('contact')
+                .title('Contact')
+                .schemaType('page')
             ])),
       S.listItem()
         .title('News Items')
