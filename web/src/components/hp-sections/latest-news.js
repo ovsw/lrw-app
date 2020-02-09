@@ -36,8 +36,8 @@ const LatestNewsContent = ({post}) => {
       pt: [ '1rem', '1rem', '1rem', 0 ],
       p: {lineHeight: 'snug'}
     }}>
+      <div sx={{color: 'gray.5', fontFamily: 'mono', fontSize: 1, borderTop: '1px solid', borderLeft: '1px solid', borderColor: 'gray.4', pl: 3, display: 'inline-block', pt: 3, mt: 2}}>{format(post.publishedAt, 'MMMM Do, YYYY')}</div>
       <Styled.h2 as='h2'>{post.title}</Styled.h2>
-      <div sx={{color: 'gray.5', fontSize: 1, borderTop: '1px solid', borderColor: 'gray.4', display: 'inline-block', pt: 3, mt: 2}}>{format(post.publishedAt, 'MMMM Do, YYYY')}</div>
       {post._rawExcerpt && (
         <div>
           <PortableText blocks={post._rawExcerpt} sx={{fontFamily: 'body'}} />
