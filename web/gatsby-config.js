@@ -6,7 +6,7 @@ require('dotenv').config({
 const path = require(`path`)
 const clientConfig = require('./client-config')
 
-const isProd = process.env.NODE_ENV === 'production'
+// const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   siteMetadata: {
@@ -357,8 +357,8 @@ module.exports = {
       options: {
         ...clientConfig.sanity,
         token: process.env.SANITY_READ_TOKEN,
-        watchMode: !isProd,
-        overlayDrafts: !isProd
+        watchMode: true,
+        overlayDrafts: true
       }
     }
   ]
